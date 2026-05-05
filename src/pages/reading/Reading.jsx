@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { getNews } from "../../services/newsApi.js";
+import { getNews } from "../../services/newsApi";
 
 export default function Reading() {
   const [news, setNews] = useState([]);

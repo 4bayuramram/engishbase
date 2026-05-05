@@ -1,22 +1,22 @@
 import { Routes, Route } from "react-router-dom";
 
-import Home from "../pages/home/Home.jsx";
+import Home from "../pages/home/Home";
 
-import Reading from "../pages/reading/Reading.jsx";
-
-
-import PreGrammar from "../pages/lesson/PreGrammar/PreGrammar.jsx";
-import Grammarpage from "../pages/lesson/Grammar/Grammarpage.jsx";
+import Reading from "../pages/reading/Reading";
 
 
-import Noun from "../pages/lesson/Noun.jsx";
-import Adjective from "../pages/lesson/Adjective.jsx";
-import Verb from "../pages/lesson/Verb.jsx";
-import Pronoun from "../pages/lesson/Pronoun.jsx";
-import Pattern from "../pages/lesson/Pattern.jsx";
-import Tobe from "../pages/lesson/Tobe.jsx";
-import Past from "../pages/lesson/Past.jsx";
-import DidntVsNot from "../pages/lesson/DidntVsNot.jsx";
+import PreGrammar from "../pages/lesson/PreGrammar/PreGrammar";
+import GrammarPage from "../pages/lesson/Grammar/GrammarPage";
+
+
+import Noun from "../pages/lesson/Noun";
+import Adjective from "../pages/lesson/Adjective";
+import Verb from "../pages/lesson/Verb";
+import Pronoun from "../pages/lesson/Pronoun";
+import Pattern from "../pages/lesson/Pattern";
+import Tobe from "../pages/lesson/Tobe";
+import Past from "../pages/lesson/Past";
+import DidntVsNot from "../pages/lesson/DidntVsNot";
 
 
 export default function AppRoutes() {
