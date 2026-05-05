@@ -25,7 +25,7 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
 
       <Route path="/pre-grammar" element={<PreGrammar />} />
-      <Route path="/grammar-page" element={<Grammarpage />} />
+      <Route path="/grammar-page" element={<GrammarPage />} />
 
       <Route path="/noun" element={<Noun />} />
       <Route path="/adjective" element={<Adjective />} />
