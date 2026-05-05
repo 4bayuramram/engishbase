@@ -1,5 +1,5 @@
 import React from "react";
-import AnimatedList from "../../bits/AnimatedList/AnimatedList";
+import AnimatedList from "../../bits/AnimatedList/AnimatedList.jsx";
 import { useNavigate } from "react-router-dom";
 
 const Beginner = () => {

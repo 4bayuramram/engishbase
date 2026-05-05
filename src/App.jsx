@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
-import Navbar from "./components/global/Navbar"
+import Navbar from "./components/global/Navbar.jsx"
 
 export default function App() {
   return (
