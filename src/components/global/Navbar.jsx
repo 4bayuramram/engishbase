@@ -1,153 +1,180 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [grammarOpen, setGrammarOpen] = useState(false);
   const [practiceOpen, setPracticeOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-surface-container-high border-b border-outline-variant font-manrope">
-      {/* CONTAINER */}
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* LOGO */}
-        <div className="text-primary font-headline-md">EnglishBase</div>
+    <nav
+      className="w-full fixed top-0 left-0 z-50"
+      style={{ fontFamily: "Montserrat, sans-serif" }}
+    >
+      {/* GLASS CONTAINER */}
+      <div
+        className="
+        backdrop-blur-xl
+        bg-gray-500/10
+        border-b border-white/10
+        shadow-[0_8px_30px_rgba(0,0,0,0.05)]
+      "
+      >
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+          {/* LOGO */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-gray-900 font-bold text-lg tracking-tight"
+          >
+            English<span className="text-blue-500">Base</span>
+          </motion.div>
 
-        {/* DESKTOP MENU */}
-        <div className="hidden md:flex gap-6 text-body-md text-onSurface items-center">
-          <Link to="/" className="hover:text-primary transition">
-            HOME
-          </Link>
+          {/* DESKTOP MENU */}
+          <div className="hidden md:flex gap-8 text-sm text-gray-700 items-center">
+            <Link to="/">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                className="hover:text-blue-500"
+              >
+                Home
+              </motion.span>
+            </Link>
 
-          {/* BASIC GRAMMAR DROPDOWN */}
-          <Link to="/pre-grammar" className="hover:text-primary transition">
-            PRE-GRAMMAR
-          </Link>
+            <Link to="/pre-grammar">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                className="hover:text-blue-500"
+              >
+                Pre-Grammar
+              </motion.span>
+            </Link>
 
-          <Link to="/grammar-page" className="hover:text-primary transition">
-            GRAMMAR
-          </Link>
+            <Link to="/grammar-page">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                className="hover:text-blue-500"
+              >
+                Grammar
+              </motion.span>
+            </Link>
 
-          {/* PRACTICE DROPDOWN */}
-          <div className="relative">
-            <button
-              onClick={() => setPracticeOpen(!practiceOpen)}
-              className="hover:text-primary transition"
-            >
-              PRATICE ▾
-            </button>
+            {/* PRACTICE */}
+            <div className="relative">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setPracticeOpen(!practiceOpen)}
+                className="hover:text-blue-500"
+              >
+                Practice ▾
+              </motion.button>
 
-            {practiceOpen && (
-              <div className="absolute top-8 left-0 bg-surface-container-low shadow-md rounded-lg p-3 flex flex-col gap-2 w-48 z-50">
-                <Link
-                  to="/practice/reading"
-                  className="hover:text-primary"
-                  onClick={() => setPracticeOpen(false)}
-                >
-                  Reading
-                </Link>
+              <AnimatePresence>
+                {practiceOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="
+                      absolute top-10 left-0 w-48 p-3 rounded-xl
+                      bg-white/70 backdrop-blur-lg
+                      border border-white/20
+                      shadow-xl
+                      flex flex-col gap-2
+                    "
+                  >
+                    <Link
+                      to="/practice/reading"
+                      onClick={() => setPracticeOpen(false)}
+                      className="hover:text-blue-500"
+                    >
+                      Reading
+                    </Link>
 
-                <Link
-                  to="/practice/quiz"
-                  className="hover:text-primary"
-                  onClick={() => setPracticeOpen(false)}
-                >
-                  Quiz (Soon)
-                </Link>
-              </div>
-            )}
+                    <Link
+                      to="/practice/quiz"
+                      onClick={() => setPracticeOpen(false)}
+                      className="hover:text-blue-500"
+                    >
+                      Quiz (Soon)
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
+
+          {/* MOBILE BUTTON */}
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-xl text-gray-800"
+          >
+            ☰
+          </motion.button>
         </div>
 
-        {/* MOBILE BUTTON */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-onSurface text-2xl"
-        >
-          ☰
-        </button>
+        {/* MOBILE MENU */}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.25 }}
+              className="
+                md:hidden px-4 pb-4
+                bg-white/70 backdrop-blur-xl
+                border-t border-white/10
+                flex flex-col gap-3 text-sm
+              "
+            >
+              <Link to="/" onClick={() => setOpen(false)}>
+                Home
+              </Link>
+              <Link to="/pre-grammar" onClick={() => setOpen(false)}>
+                Pre-Grammar
+              </Link>
+              <Link to="/grammar-page" onClick={() => setOpen(false)}>
+                Grammar
+              </Link>
+
+              {/* PRACTICE MOBILE */}
+              <div>
+                <button
+                  onClick={() => setPracticeOpen(!practiceOpen)}
+                  className="w-full text-left"
+                >
+                  Practice ▾
+                </button>
+
+                <AnimatePresence>
+                  {practiceOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -5 }}
+                      className="pl-4 mt-2 flex flex-col gap-2 text-sm"
+                    >
+                      <Link
+                        to="/practice/reading"
+                        onClick={() => setOpen(false)}
+                      >
+                        Reading
+                      </Link>
+
+                      <Link to="/practice/quiz" onClick={() => setOpen(false)}>
+                        Quiz (Soon)
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-
-      {/* MOBILE MENU */}
-      {open && (
-        <div className="md:hidden px-4 pb-4 flex flex-col gap-3 text-body-md bg-surface-container">
-          <Link to="/" onClick={() => setOpen(false)}>
-            Home
-          </Link>
-
-          {/* MOBILE BASIC GRAMMAR */}
-          <div>
-            <button
-              onClick={() => setGrammarOpen(!grammarOpen)}
-              className="w-full text-left"
-            >
-              Basic Grammar ▾
-            </button>
-
-            {grammarOpen && (
-              <div className="pl-4 mt-2 flex flex-col gap-2 text-body-sm">
-                <Link to="/noun" onClick={() => setOpen(false)}>
-                  Noun
-                </Link>
-
-                <Link to="/adjective" onClick={() => setOpen(false)}>
-                  Adjective
-                </Link>
-
-                <Link to="/verb" onClick={() => setOpen(false)}>
-                  Verb
-                </Link>
-
-                <Link to="/pronoun" onClick={() => setOpen(false)}>
-                  Pronoun
-                </Link>
-
-                <Link to="/pattern" onClick={() => setOpen(false)}>
-                  Pattern
-                </Link>
-
-                <Link to="/tobe" onClick={() => setOpen(false)}>
-                  To Be
-                </Link>
-
-                <Link to="/past" onClick={() => setOpen(false)}>
-                  Past
-                </Link>
-
-                <Link to="/didntvsnot" onClick={() => setOpen(false)}>
-                  Didn't vs Not
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Link to="/grammar" onClick={() => setOpen(false)}>
-            Grammar
-          </Link>
-
-          {/* MOBILE PRACTICE */}
-          <div>
-            <button
-              onClick={() => setPracticeOpen(!practiceOpen)}
-              className="w-full text-left"
-            >
-              Practice ▾
-            </button>
-
-            {practiceOpen && (
-              <div className="pl-4 mt-2 flex flex-col gap-2 text-body-sm">
-                <Link to="/reading" onClick={() => setOpen(false)}>
-                  Reading
-                </Link>
-
-                <Link to="/practice/quiz" onClick={() => setOpen(false)}>
-                  Quiz (Soon)
-                </Link>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </nav>
   );
 }
