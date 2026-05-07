@@ -5,6 +5,8 @@ import Beginner from "../../../components/grammar/level/Beginner";
 import Intermediate from "../../../components/grammar/level/Intermediate";
 import Advance from "../../../components/grammar/level/Advance";
 
+import GrammarRoadmapSection from "../../../components/grammar/section3/GrammarRoadmapSection"
+
 const GrammarPage = () => {
   const [activeTab, setActiveTab] = useState("grammar1");
 
@@ -52,6 +54,8 @@ const GrammarPage = () => {
         {activeTab === "grammar2" && <Intermediate />}
         {activeTab === "grammar3" && <Advance />}
       </section>
+      {/* SECTION 3 */}
+      <GrammarRoadmapSection />
     </>
   );
 };
