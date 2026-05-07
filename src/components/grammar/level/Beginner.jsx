@@ -7,87 +7,87 @@ const Beginner = () => {
 
   const items = [
     {
-      title: "Introduction to English Grammar",
-      path: "/beginner/introduction-grammar",
+      title: "1. Introduction to English Grammar",
+      path: "/beginner/GrammarIntroPage",
     },
     {
-      title: "Basic Sentence Structure (SVO Pattern)",
-      path: "/beginner/sentence-structure",
+      title: "2. Basic Sentence Structure (SVO Pattern)",
+      path: "/beginner/SVOPatternPage",
     },
     {
-      title: "Present Simple Tense Usage",
-      path: "/beginner/present-simple",
+      title: "3. Present Simple Tense Usage",
+      path: "/beginner/PresentSimplePage",
     },
     {
-      title: "Present Continuous Tense",
+      title: "4. Present Continuous Tense",
       path: "/beginner/present-continuous",
     },
     {
-      title: "Past Simple Tense",
+      title: "5. Past Simple Tense",
       path: "/beginner/past-simple",
     },
     {
-      title: "Future Simple Tense (Will / Going to)",
+      title: "6. Future Simple Tense (Will / Going to)",
       path: "/beginner/future-simple",
     },
     {
-      title: "Countable & Uncountable Nouns",
+      title: "7. Countable & Uncountable Nouns",
       path: "/beginner/countable-uncountable",
     },
     {
-      title: "Articles (A, An, The)",
+      title: "8. Articles (A, An, The)",
       path: "/beginner/articles",
     },
     {
-      title: "Subject & Object Pronouns",
+      title: "9. Subject & Object Pronouns",
       path: "/beginner/pronouns",
     },
     {
-      title: "Possessive Pronouns",
+      title: "10. Possessive Pronouns",
       path: "/beginner/possessive-pronouns",
     },
     {
-      title: "Basic Adjectives & Comparatives",
+      title: "11. Basic Adjectives & Comparatives",
       path: "/beginner/adjectives-comparatives",
     },
     {
-      title: "Adverbs of Frequency",
+      title: "12. Adverbs of Frequency",
       path: "/beginner/adverbs-frequency",
     },
     {
-      title: "Prepositions of Time (in, on, at)",
+      title: "13. Prepositions of Time (in, on, at)",
       path: "/beginner/prepositions-time",
     },
     {
-      title: "Prepositions of Place",
+      title: "14. Prepositions of Place",
       path: "/beginner/prepositions-place",
     },
     {
-      title: "Yes/No Questions Formation",
+      title: "15. Yes/No Questions Formation",
       path: "/beginner/yes-no-questions",
     },
     {
-      title: "Wh- Questions (What, Where, Why)",
+      title: "16. Wh- Questions (What, Where, Why)",
       path: "/beginner/wh-questions",
     },
     {
-      title: "Basic Conjunctions (and, but, or)",
+      title: "17. Basic Conjunctions (and, but, or)",
       path: "/beginner/conjunctions",
     },
     {
-      title: "Imperatives (Commands & Instructions)",
+      title: "18. Imperatives (Commands & Instructions)",
       path: "/beginner/imperatives",
     },
     {
-      title: "Modal Verbs Basics (can, must, should)",
+      title: "19. Modal Verbs Basics (can, must, should)",
       path: "/beginner/modal-verbs",
     },
     {
-      title: "Conditionals Type 0 (Facts & General Truths)",
+      title: "20. Conditionals Type 0 (Facts & General Truths)",
       path: "/beginner/conditionals-type-0",
     },
     {
-      title: "Conditionals Type 0 (Facts & General Truths)",
+      title: "20. Conditionals Type 0 (Facts & General Truths)",
       path: "/beginner/conditionals-type-0",
     },
   ];
