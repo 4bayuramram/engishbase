@@ -1,10 +1,10 @@
-
+"use client";
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import TestPanel from "../../../../components/grammar/TestPanel1";
 
-export default function AdverbsOfFrequencyPage() {
+export default function ModalVerbsBasicsPage() {
   const navigate = useNavigate();
 
   return (
@@ -27,16 +27,17 @@ export default function AdverbsOfFrequencyPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 12
+            Lesson 19
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Adverbs of Frequency
+            Modal Verbs Basics
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar kata keterangan yang menunjukkan
-            seberapa sering suatu aktivitas dilakukan.
+            Di materi ini kamu akan belajar modal verbs yang digunakan untuk
+            menyatakan kemampuan, izin, kemungkinan, saran, dan keharusan dalam
+            bahasa Inggris.
           </p>
         </motion.div>
 
@@ -50,20 +51,22 @@ export default function AdverbsOfFrequencyPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Adverbs of Frequency?
+              Apa itu Modal Verbs?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Adverbs of frequency adalah kata keterangan yang menjelaskan
-              seberapa sering sesuatu terjadi dalam sebuah kalimat.
+              Modal verbs adalah kata kerja bantu yang digunakan untuk
+              memodifikasi makna kata kerja utama, seperti menunjukkan
+              kemampuan, kemungkinan, izin, kewajiban, atau saran.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              always / usually / often / sometimes / rarely / never
+              can / could / may / might / must / shall / should / will / would /
+              ought to
             </div>
           </motion.section>
 
-          {/* Explanation */}
+          {/* List Modal Verbs */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,20 +75,44 @@ export default function AdverbsOfFrequencyPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Penjelasan Penggunaan
+              Daftar Modal Verbs & Fungsi
             </h2>
 
-            <div className="mt-4 space-y-3 text-white/70">
-              <p>• Always → selalu (100%)</p>
-              <p>• Usually → biasanya (70–90%)</p>
-              <p>• Often → sering</p>
-              <p>• Sometimes → kadang-kadang</p>
-              <p>• Rarely → jarang</p>
-              <p>• Never → tidak pernah (0%)</p>
+            <div className="mt-6 space-y-4 text-white/70">
+              <p>
+                • <b>Can</b> → kemampuan / izin / kemungkinan
+              </p>
+              <p>
+                • <b>Could</b> → kemampuan lampau / sopan / kemungkinan
+              </p>
+              <p>
+                • <b>May</b> → izin / kemungkinan besar
+              </p>
+              <p>
+                • <b>Might</b> → kemungkinan kecil
+              </p>
+              <p>
+                • <b>Must</b> → kewajiban / kesimpulan kuat
+              </p>
+              <p>
+                • <b>Shall</b> → saran / rencana
+              </p>
+              <p>
+                • <b>Should</b> → saran / nasihat
+              </p>
+              <p>
+                • <b>Will</b> → masa depan / kemauan
+              </p>
+              <p>
+                • <b>Would</b> → permintaan sopan / kebiasaan lampau
+              </p>
+              <p>
+                • <b>Ought to</b> → saran / kewajiban moral
+              </p>
             </div>
           </motion.section>
 
-          {/* Grammar Rule */}
+          {/* Grammar Rules */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,14 +120,21 @@ export default function AdverbsOfFrequencyPage() {
             transition={{ duration: 0.5 }}
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
-            <h2 className="text-2xl font-semibold text-white">
-              Aturan Penting
-            </h2>
+            <h2 className="text-2xl font-semibold text-white">Grammar Rules</h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Biasanya ditempatkan sebelum verb utama</p>
-              <p>• Tapi setelah “to be” (am/is/are)</p>
-              <p>• Contoh: She always goes to school</p>
+              <p>• Modal + Verb 1 (bare infinitive)</p>
+              <p>• Tidak berubah walau subjek berbeda</p>
+              <p>• Tidak memakai do/does/did</p>
+              <p>• Hanya boleh satu modal dalam satu kalimat</p>
+            </div>
+
+            <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white/70">
+              <p>✔ She can swim</p>
+              <p>✔ They will go</p>
+              <p>✘ She can to swim (salah)</p>
+              <p>✘ I will can go (salah)</p>
+              <p>✔ I will be able to go (benar)</p>
             </div>
           </motion.section>
 
@@ -117,14 +151,15 @@ export default function AdverbsOfFrequencyPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I always wake up early</p>
-              <p>• She usually drinks coffee</p>
-              <p>• They often play football</p>
-              <p>• We sometimes go to the beach</p>
+              <p>• I can speak English</p>
+              <p>• You should eat healthy food</p>
+              <p>• She might come late</p>
+              <p>• We must finish the task</p>
+              <p>• Could you help me?</p>
             </div>
           </motion.section>
 
-          {/* Test */}
+          {/* Test 1 */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -132,47 +167,62 @@ export default function AdverbsOfFrequencyPage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat Adverbs of Frequency yang benar:"
+              question="Pilih kalimat yang menggunakan modal verb dengan benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. She goes always to school",
+                  label: "A. She can speaks English",
                   isCorrect: false,
-                  feedback:
-                    "Salah karena adverb 'always' harus ditempatkan sebelum verb utama.",
+                  feedback: "Salah karena setelah modal harus Verb 1 tanpa -s.",
                 },
                 {
                   value: "b",
-                  label: "B. She goes to always school",
-                  isCorrect: false,
-                  feedback:
-                    "Salah karena posisi adverb tidak sesuai aturan grammar.",
+                  label: "B. She can speak English",
+                  isCorrect: true,
+                  feedback: "Benar karena 'can' diikuti bare infinitive.",
                 },
                 {
                   value: "c",
-                  label: "C. She always goes to school",
-                  isCorrect: true,
-                  feedback:
-                    "Benar karena adverb of frequency ditempatkan sebelum verb utama.",
+                  label: "C. She can to speak English",
+                  isCorrect: false,
+                  feedback: "Salah karena tidak boleh ada 'to' setelah modal.",
                 },
               ]}
             />
           </motion.section>
 
-          {/* Tips */}
+          {/* Test 2 */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
+            className="mt-8"
           >
-            <h2 className="text-2xl font-semibold text-white">Tips</h2>
-
-            <p className="mt-4 text-white/70 leading-relaxed">
-              Ingat pola sederhana: Subject + Adverb + Verb. Ini akan membantu
-              kamu tidak salah posisi kata.
-            </p>
+            <TestPanel
+              question="Pilih kalimat yang paling tepat menggunakan modal verb:"
+              options={[
+                {
+                  value: "a",
+                  label: "A. You must to study harder",
+                  isCorrect: false,
+                  feedback: "Salah karena tidak boleh ada 'to' setelah modal.",
+                },
+                {
+                  value: "b",
+                  label: "B. You must study harder",
+                  isCorrect: true,
+                  feedback: "Benar karena 'must' diikuti Verb 1.",
+                },
+                {
+                  value: "c",
+                  label: "C. You must studying harder",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena tidak boleh menggunakan -ing setelah modal.",
+                },
+              ]}
+            />
           </motion.section>
         </div>
 
@@ -185,14 +235,14 @@ export default function AdverbsOfFrequencyPage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/AdjectivesComparativesPage")}
+            onClick={() => navigate("/beginner/ImperativesPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PrepositionsOfTimePage")}
+            onClick={() => navigate("/beginner/ConditionalsType0Page")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

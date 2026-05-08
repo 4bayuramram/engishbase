@@ -1,10 +1,10 @@
-
+"use client";
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import TestPanel from "../../../../components/grammar/TestPanel1";
 
-export default function AdverbsOfFrequencyPage() {
+export default function YesNoQuestionsFormationPage() {
   const navigate = useNavigate();
 
   return (
@@ -27,16 +27,17 @@ export default function AdverbsOfFrequencyPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 12
+            Lesson 15
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Adverbs of Frequency
+            Yes/No Questions Formation
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar kata keterangan yang menunjukkan
-            seberapa sering suatu aktivitas dilakukan.
+            Di materi ini kamu akan belajar cara membuat pertanyaan Yes/No dalam
+            bahasa Inggris menggunakan auxiliary verbs seperti do, does, did,
+            am, is, are, dan modal verbs.
           </p>
         </motion.div>
 
@@ -50,16 +51,16 @@ export default function AdverbsOfFrequencyPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Adverbs of Frequency?
+              Apa itu Yes/No Questions?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Adverbs of frequency adalah kata keterangan yang menjelaskan
-              seberapa sering sesuatu terjadi dalam sebuah kalimat.
+              Yes/No Questions adalah pertanyaan yang jawabannya biasanya hanya
+              “Yes” atau “No”.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              always / usually / often / sometimes / rarely / never
+              Auxiliary Verb + Subject + Verb + ?
             </div>
           </motion.section>
 
@@ -75,13 +76,64 @@ export default function AdverbsOfFrequencyPage() {
               Penjelasan Penggunaan
             </h2>
 
-            <div className="mt-4 space-y-3 text-white/70">
-              <p>• Always → selalu (100%)</p>
-              <p>• Usually → biasanya (70–90%)</p>
-              <p>• Often → sering</p>
-              <p>• Sometimes → kadang-kadang</p>
-              <p>• Rarely → jarang</p>
-              <p>• Never → tidak pernah (0%)</p>
+            <div className="mt-6 space-y-6 text-white/70">
+              <div>
+                <h3 className="font-semibold text-white text-lg">
+                  1. Menggunakan Do / Does
+                </h3>
+
+                <p className="mt-2">Digunakan pada Present Simple.</p>
+
+                <div className="mt-3 space-y-2">
+                  <p>• Do you like coffee?</p>
+                  <p>• Does she play piano?</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-white text-lg">
+                  2. Menggunakan Did
+                </h3>
+
+                <p className="mt-2">Digunakan pada Past Simple.</p>
+
+                <div className="mt-3 space-y-2">
+                  <p>• Did they visit Bali?</p>
+                  <p>• Did he call you yesterday?</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-white text-lg">
+                  3. Menggunakan To Be
+                </h3>
+
+                <p className="mt-2">
+                  Jika kalimat menggunakan am, is, atau are maka cukup pindahkan
+                  to be ke depan.
+                </p>
+
+                <div className="mt-3 space-y-2">
+                  <p>• Are you happy?</p>
+                  <p>• Is she a doctor?</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-white text-lg">
+                  4. Menggunakan Modal Verbs
+                </h3>
+
+                <p className="mt-2">
+                  Modal seperti can, will, should, dan must dipindahkan ke awal
+                  kalimat.
+                </p>
+
+                <div className="mt-3 space-y-2">
+                  <p>• Can you swim?</p>
+                  <p>• Will they come tonight?</p>
+                </div>
+              </div>
             </div>
           </motion.section>
 
@@ -98,9 +150,10 @@ export default function AdverbsOfFrequencyPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Biasanya ditempatkan sebelum verb utama</p>
-              <p>• Tapi setelah “to be” (am/is/are)</p>
-              <p>• Contoh: She always goes to school</p>
+              <p>• Auxiliary verb harus berada di awal pertanyaan</p>
+              <p>• Setelah does/did gunakan verb bentuk pertama</p>
+              <p>• Gunakan tanda tanya di akhir kalimat</p>
+              <p>• Jangan gunakan verb tambahan setelah to be</p>
             </div>
           </motion.section>
 
@@ -117,14 +170,15 @@ export default function AdverbsOfFrequencyPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I always wake up early</p>
-              <p>• She usually drinks coffee</p>
-              <p>• They often play football</p>
-              <p>• We sometimes go to the beach</p>
+              <p>• Do you study English every day?</p>
+              <p>• Does she work in Jakarta?</p>
+              <p>• Did they watch the movie?</p>
+              <p>• Are we late?</p>
+              <p>• Can he drive a car?</p>
             </div>
           </motion.section>
 
-          {/* Test */}
+          {/* Test 1 */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -132,28 +186,62 @@ export default function AdverbsOfFrequencyPage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat Adverbs of Frequency yang benar:"
+              question="Pilih bentuk Yes/No Question yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. She goes always to school",
+                  label: "A. Did she has finished her homework before dinner?",
                   isCorrect: false,
                   feedback:
-                    "Salah karena adverb 'always' harus ditempatkan sebelum verb utama.",
+                    "Salah karena setelah 'did' verb harus bentuk dasar (have/finish), bukan 'has'.",
                 },
                 {
                   value: "b",
-                  label: "B. She goes to always school",
+                  label: "B. Did she finished her homework before dinner?",
                   isCorrect: false,
                   feedback:
-                    "Salah karena posisi adverb tidak sesuai aturan grammar.",
+                    "Salah karena setelah 'did' tidak boleh menggunakan verb bentuk past (-ed).",
                 },
                 {
                   value: "c",
-                  label: "C. She always goes to school",
+                  label: "C. Did she finish her homework before dinner?",
                   isCorrect: true,
                   feedback:
-                    "Benar karena adverb of frequency ditempatkan sebelum verb utama.",
+                    "Benar karena setelah 'did' selalu menggunakan verb bentuk dasar (V1).",
+                },
+              ]}
+            />
+          </motion.section>
+
+          {/* Test 2 */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <TestPanel
+              question="Pilih kalimat Yes/No Question yang paling tepat:"
+              options={[
+                {
+                  value: "a",
+                  label: "A. Did he went to school yesterday?",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena setelah 'did' verb harus bentuk pertama.",
+                },
+                {
+                  value: "b",
+                  label: "B. Did he go to school yesterday?",
+                  isCorrect: true,
+                  feedback:
+                    "Benar karena menggunakan verb bentuk pertama setelah 'did'.",
+                },
+                {
+                  value: "c",
+                  label: "C. He did go to school yesterday?",
+                  isCorrect: false,
+                  feedback: "Salah karena susunan pertanyaan tidak tepat.",
                 },
               ]}
             />
@@ -170,8 +258,14 @@ export default function AdverbsOfFrequencyPage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Ingat pola sederhana: Subject + Adverb + Verb. Ini akan membantu
-              kamu tidak salah posisi kata.
+              Cara paling mudah membuat Yes/No Questions adalah memindahkan
+              auxiliary verb ke depan kalimat.
+              <br />
+              <br />
+              Contoh:
+              <br />
+              • She likes pizza → Does she like pizza?
+              <br />• They went home → Did they go home?
             </p>
           </motion.section>
         </div>
@@ -185,14 +279,14 @@ export default function AdverbsOfFrequencyPage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/AdjectivesComparativesPage")}
+            onClick={() => navigate("/beginner/PrepositionsOfPlacePage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PrepositionsOfTimePage")}
+            onClick={() => navigate("/beginner/WhQuestionsPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

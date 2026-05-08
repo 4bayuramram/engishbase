@@ -56,35 +56,35 @@ const Beginner = () => {
     },
     {
       title: "13. Prepositions of Time (in, on, at)",
-      path: "/beginner/prepositions-time",
+      path: "/beginner/PrepositionsOfTimePage",
     },
     {
       title: "14. Prepositions of Place",
-      path: "/beginner/prepositions-place",
+      path: "/beginner/PrepositionsOfPlacePage",
     },
     {
       title: "15. Yes/No Questions Formation",
-      path: "/beginner/yes-no-questions",
+      path: "/beginner/YesNoQuestionsFormationPage",
     },
     {
-      title: "16. Wh- Questions (What, Where, Why)",
-      path: "/beginner/wh-questions",
+      title: "16. Wh- Questions (5W + 1H)",
+      path: "/beginner/WhQuestionsPage",
     },
     {
-      title: "17. Basic Conjunctions (and, but, or)",
-      path: "/beginner/conjunctions",
+      title: "17. Basic Conjunctions",
+      path: "/beginner/BasicConjunctionsPage",
     },
     {
       title: "18. Imperatives (Commands & Instructions)",
-      path: "/beginner/imperatives",
+      path: "/beginner/ImperativesPage",
     },
     {
       title: "19. Modal Verbs Basics (can, must, should)",
-      path: "/beginner/modal-verbs",
+      path: "/beginner/ModalVerbsBasicsPage",
     },
     {
       title: "20. Conditionals Type 0 (Facts & General Truths)",
-      path: "/beginner/conditionals-type-0",
+      path: "/beginner/ConditionalsType0Page",
     },
     {
       title: "20. Conditionals Type 0 (Facts & General Truths)",

@@ -31,6 +31,14 @@ import PronounsPage from "../pages/lesson/Grammar/materi/PronounsPage";
 import PossessivePronounsPage from "../pages/lesson/Grammar/materi/PossessivePronounsPage";
 import AdjectivesComparativesPage from "../pages/lesson/Grammar/materi/AdjectivesComparativesPage";
 import AdverbsOfFrequencyPage from "../pages/lesson/Grammar/materi/AdverbsOfFrequencyPage";
+import PrepositionsOfTimePage from "../pages/lesson/Grammar/materi/PrepositionsOfTimePage";
+import PrepositionsOfPlacePage from "../pages/lesson/Grammar/materi/PrepositionsOfPlacePage";
+import YesNoQuestionsFormationPage from "../pages/lesson/Grammar/materi/YesNoQuestionsFormationPage";
+import WhQuestionsPage from "../pages/lesson/Grammar/materi/WhQuestionsPage";
+import BasicConjunctionsPage from "../pages/lesson/Grammar/materi/BasicConjunctionsPage";
+import ImperativesPage from "../pages/lesson/Grammar/materi/ImperativesPage";
+import ModalVerbsBasicsPage from "../pages/lesson/Grammar/materi/ModalVerbsBasicsPage";
+import ConditionalsType0Page from "../pages/lesson/Grammar/materi/ConditionalsType0Page";
 
 
 
@@ -85,6 +93,32 @@ export default function AppRoutes() {
       <Route
         path="/beginner/AdverbsOfFrequencyPage"
         element={<AdverbsOfFrequencyPage />}
+      />
+      <Route
+        path="/beginner/PrepositionsOfTimePage"
+        element={<PrepositionsOfTimePage />}
+      />
+      <Route
+        path="/beginner/PrepositionsOfPlacePage"
+        element={<PrepositionsOfPlacePage />}
+      />
+      <Route
+        path="/beginner/YesNoQuestionsFormationPage"
+        element={<YesNoQuestionsFormationPage />}
+      />
+      <Route path="/beginner/WhQuestionsPage" element={<WhQuestionsPage />} />
+      <Route
+        path="/beginner/BasicConjunctionsPage"
+        element={<BasicConjunctionsPage />}
+      />
+      <Route path="/beginner/ImperativesPage" element={<ImperativesPage />} />
+      <Route
+        path="/beginner/ModalVerbsBasicsPage"
+        element={<ModalVerbsBasicsPage />}
+      />
+      <Route
+        path="/beginner/ConditionalsType0Page"
+        element={<ConditionalsType0Page />}
       />
 
       {/* routes halaman baca  */}
