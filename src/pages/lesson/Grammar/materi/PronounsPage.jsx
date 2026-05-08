@@ -1,11 +1,10 @@
-// PresentSimplePage.jsx
 "use client";
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import TestPanel from "../../../../components/grammar/TestPanel1";
 
-export default function PresentSimplePage() {
+export default function PronounsPage() {
   const navigate = useNavigate();
 
   return (
@@ -28,17 +27,17 @@ export default function PresentSimplePage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 3
+            Lesson 9
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Present Simple Tense Usage
+            Subject & Object Pronouns
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan memahami bagaimana Present Simple digunakan
-            dalam kehidupan sehari-hari untuk menyatakan kebiasaan, fakta umum,
-            dan rutinitas.
+            Di materi ini kamu akan belajar kata ganti orang yang digunakan
+            sebagai subjek (pelaku) dan objek (penerima aksi) dalam kalimat
+            bahasa Inggris.
           </p>
         </motion.div>
 
@@ -52,21 +51,20 @@ export default function PresentSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Present Simple?
+              Apa itu Pronouns?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Present Simple adalah tense yang digunakan untuk menyatakan
-              kejadian yang terjadi secara rutin, fakta umum, atau sesuatu yang
-              selalu benar.
+              Pronouns adalah kata ganti yang digunakan untuk menggantikan noun
+              (kata benda) agar kalimat tidak berulang dan lebih natural.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              Subject + Verb (base form / s/es)
+              Subject → Object Pronouns
             </div>
           </motion.section>
 
-          {/* Usage */}
+          {/* Full Table */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,23 +73,47 @@ export default function PresentSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Kapan digunakan?
+              Subject & Object Pronouns Lengkap
             </h2>
 
-            <ul className="mt-4 space-y-3 text-white/70">
-              <li>
-                <span className="text-white font-medium">Kebiasaan</span> → I go
-                to school every day.
-              </li>
-              <li>
-                <span className="text-white font-medium">Fakta umum</span> → The
-                sun rises in the east.
-              </li>
-              <li>
-                <span className="text-white font-medium">Rutinitas</span> → She
-                drinks coffee every morning.
-              </li>
-            </ul>
+            <div className="mt-6 grid grid-cols-2 gap-4 text-white/80">
+              <div className="bg-white/5 p-4 rounded-xl">I → me</div>
+              <div className="bg-white/5 p-4 rounded-xl">You → you</div>
+              <div className="bg-white/5 p-4 rounded-xl">He → him</div>
+              <div className="bg-white/5 p-4 rounded-xl">She → her</div>
+              <div className="bg-white/5 p-4 rounded-xl">It → it</div>
+              <div className="bg-white/5 p-4 rounded-xl">We → us</div>
+              <div className="bg-white/5 p-4 rounded-xl col-span-2">
+                They → them
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Explanation */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
+          >
+            <h2 className="text-2xl font-semibold text-white">
+              Cara Memahami dengan Mudah
+            </h2>
+
+            <div className="mt-4 space-y-3 text-white/70">
+              <p>
+                • <span className="text-white font-medium">Subject</span> =
+                pelaku aksi (yang melakukan)
+              </p>
+              <p>
+                • <span className="text-white font-medium">Object</span> =
+                penerima aksi (yang dikenai)
+              </p>
+              <p>• Contoh: She loves him → She (melakukan), him (diterima)</p>
+              <p>• “It” digunakan untuk benda/hewan/hal umum</p>
+              <p>• “We” dan “They” digunakan untuk lebih dari satu orang</p>
+            </div>
           </motion.section>
 
           {/* Grammar Rule */}
@@ -107,9 +129,9 @@ export default function PresentSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I / You / We / They → verb dasar (eat, play, read)</p>
-              <p>• He / She / It → verb + s/es (eats, plays, reads)</p>
-              <p>• Kata keterangan waktu: always, usually, often, every day</p>
+              <p>• Subject selalu di awal kalimat</p>
+              <p>• Object biasanya setelah verb</p>
+              <p>• Tidak bisa saling ditukar karena akan mengubah makna</p>
             </div>
           </motion.section>
 
@@ -126,10 +148,11 @@ export default function PresentSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I eat rice every day</p>
-              <p>• She goes to school</p>
-              <p>• They play football every weekend</p>
-              <p>• The earth moves around the sun</p>
+              <p>• I help you</p>
+              <p>• She calls me</p>
+              <p>• They see us</p>
+              <p>• We like them</p>
+              <p>• He plays it</p>
             </div>
           </motion.section>
 
@@ -141,26 +164,28 @@ export default function PresentSimplePage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat Present Simple yang benar:"
+              question="Pilih kalimat Subject & Object Pronouns yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "a. She going to school",
+                  label: "A. Him helps I",
                   isCorrect: false,
                   feedback:
-                    "Salah karena ini bentuk continuous, bukan simple present.",
+                    "Salah karena posisi subject dan object tidak sesuai aturan.",
                 },
                 {
                   value: "b",
-                  label: "B. She go to school",
+                  label: "B. Me help she",
                   isCorrect: false,
-                  feedback: "Salah karena He/She/It harus memakai verb + s/es.",
+                  feedback:
+                    "Salah karena 'me' tidak bisa digunakan sebagai subject.",
                 },
                 {
                   value: "c",
-                  label: "c. She goes to school",
+                  label: "C. She helps me",
                   isCorrect: true,
-                  feedback: "Benar karena He/She/It menggunakan verb + s/es.",
+                  feedback:
+                    "Benar karena 'she' sebagai subject dan 'me' sebagai object digunakan dengan benar.",
                 },
               ]}
             />
@@ -177,9 +202,9 @@ export default function PresentSimplePage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Fokus pada kebiasaan sehari-hari dan fakta umum. Jika sudah
-              terbiasa, kamu akan otomatis tahu kapan harus pakai Present
-              Simple.
+              Hafalkan pasangan ini seperti “I → me, he → him, she → her”. Kalau
+              sudah hafal pasangan, kamu tidak akan bingung lagi saat membuat
+              kalimat.
             </p>
           </motion.section>
         </div>
@@ -193,14 +218,14 @@ export default function PresentSimplePage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/SVOPatternPage")}
+            onClick={() => navigate("/beginner/ArticlesPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PresentContinuousPage")}
+            onClick={() => navigate("/beginner/PossessivePronounsPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

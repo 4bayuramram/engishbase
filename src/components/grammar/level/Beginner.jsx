@@ -1,4 +1,4 @@
-import React from "react";
+
 import AnimatedList from "../../bits/AnimatedList/AnimatedList.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -20,39 +20,39 @@ const Beginner = () => {
     },
     {
       title: "4. Present Continuous Tense",
-      path: "/beginner/present-continuous",
+      path: "/beginner/PresentContinuousPage",
     },
     {
       title: "5. Past Simple Tense",
-      path: "/beginner/past-simple",
+      path: "/beginner/PastSimplePage",
     },
     {
       title: "6. Future Simple Tense (Will / Going to)",
-      path: "/beginner/future-simple",
+      path: "/beginner/FutureSimplePage",
     },
     {
       title: "7. Countable & Uncountable Nouns",
-      path: "/beginner/countable-uncountable",
+      path: "/beginner/CountableUncountablePage",
     },
     {
       title: "8. Articles (A, An, The)",
-      path: "/beginner/articles",
+      path: "/beginner/ArticlesPage",
     },
     {
       title: "9. Subject & Object Pronouns",
-      path: "/beginner/pronouns",
+      path: "/beginner/PronounsPage",
     },
     {
       title: "10. Possessive Pronouns",
-      path: "/beginner/possessive-pronouns",
+      path: "/beginner/PossessivePronounsPage",
     },
     {
       title: "11. Basic Adjectives & Comparatives",
-      path: "/beginner/adjectives-comparatives",
+      path: "/beginner/AdjectivesComparativesPage",
     },
     {
       title: "12. Adverbs of Frequency",
-      path: "/beginner/adverbs-frequency",
+      path: "/beginner/AdverbsOfFrequencyPage",
     },
     {
       title: "13. Prepositions of Time (in, on, at)",

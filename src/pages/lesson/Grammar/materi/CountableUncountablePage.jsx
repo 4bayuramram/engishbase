@@ -1,11 +1,10 @@
-// PresentSimplePage.jsx
 "use client";
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import TestPanel from "../../../../components/grammar/TestPanel1";
 
-export default function PresentSimplePage() {
+export default function CountableUncountablePage() {
   const navigate = useNavigate();
 
   return (
@@ -28,17 +27,16 @@ export default function PresentSimplePage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 3
+            Lesson 7
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Present Simple Tense Usage
+            Countable & Uncountable Nouns
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan memahami bagaimana Present Simple digunakan
-            dalam kehidupan sehari-hari untuk menyatakan kebiasaan, fakta umum,
-            dan rutinitas.
+            Di materi ini kamu akan belajar perbedaan kata benda yang bisa
+            dihitung dan yang tidak bisa dihitung dalam bahasa Inggris.
           </p>
         </motion.div>
 
@@ -52,21 +50,21 @@ export default function PresentSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Present Simple?
+              Apa itu Countable & Uncountable?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Present Simple adalah tense yang digunakan untuk menyatakan
-              kejadian yang terjadi secara rutin, fakta umum, atau sesuatu yang
-              selalu benar.
+              Countable nouns adalah kata benda yang bisa dihitung satu per
+              satu. Uncountable nouns adalah kata benda yang tidak bisa dihitung
+              secara langsung tanpa ukuran tertentu.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              Subject + Verb (base form / s/es)
+              Countable = bisa dihitung | Uncountable = tidak bisa dihitung
             </div>
           </motion.section>
 
-          {/* Usage */}
+          {/* Explanation */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,23 +73,23 @@ export default function PresentSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Kapan digunakan?
+              Penjelasan Sederhana
             </h2>
 
-            <ul className="mt-4 space-y-3 text-white/70">
-              <li>
-                <span className="text-white font-medium">Kebiasaan</span> → I go
-                to school every day.
-              </li>
-              <li>
-                <span className="text-white font-medium">Fakta umum</span> → The
-                sun rises in the east.
-              </li>
-              <li>
-                <span className="text-white font-medium">Rutinitas</span> → She
-                drinks coffee every morning.
-              </li>
-            </ul>
+            <div className="mt-4 space-y-3 text-white/70">
+              <p>
+                • <span className="text-white font-medium">Countable</span> →
+                apple, book, car (bisa 1, 2, 3)
+              </p>
+              <p>
+                • <span className="text-white font-medium">Uncountable</span> →
+                water, rice, sugar (tidak dihitung satuan langsung)
+              </p>
+              <p>
+                • Uncountable biasanya butuh ukuran: a glass of water, a bowl of
+                rice
+              </p>
+            </div>
           </motion.section>
 
           {/* Grammar Rule */}
@@ -107,9 +105,9 @@ export default function PresentSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I / You / We / They → verb dasar (eat, play, read)</p>
-              <p>• He / She / It → verb + s/es (eats, plays, reads)</p>
-              <p>• Kata keterangan waktu: always, usually, often, every day</p>
+              <p>• Countable → bisa pakai a/an, plural (books, apples)</p>
+              <p>• Uncountable → tidak pakai a/an, tidak punya bentuk plural</p>
+              <p>• Gunakan some / a little untuk uncountable nouns</p>
             </div>
           </motion.section>
 
@@ -126,10 +124,10 @@ export default function PresentSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I eat rice every day</p>
-              <p>• She goes to school</p>
-              <p>• They play football every weekend</p>
-              <p>• The earth moves around the sun</p>
+              <p>• I have two books (countable)</p>
+              <p>• She drinks some water (uncountable)</p>
+              <p>• They buy three apples (countable)</p>
+              <p>• We need a little sugar (uncountable)</p>
             </div>
           </motion.section>
 
@@ -141,26 +139,28 @@ export default function PresentSimplePage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat Present Simple yang benar:"
+              question="Pilih kalimat yang benar tentang countable/uncountable noun:"
               options={[
                 {
                   value: "a",
-                  label: "a. She going to school",
-                  isCorrect: false,
+                  label: "A. I have some water",
+                  isCorrect: true,
                   feedback:
-                    "Salah karena ini bentuk continuous, bukan simple present.",
+                    "Benar karena 'water' adalah uncountable noun dan cocok menggunakan 'some'.",
                 },
                 {
                   value: "b",
-                  label: "B. She go to school",
+                  label: "B. I have a water",
                   isCorrect: false,
-                  feedback: "Salah karena He/She/It harus memakai verb + s/es.",
+                  feedback:
+                    "Salah karena 'water' tidak bisa digunakan dengan 'a'.",
                 },
                 {
                   value: "c",
-                  label: "c. She goes to school",
-                  isCorrect: true,
-                  feedback: "Benar karena He/She/It menggunakan verb + s/es.",
+                  label: "C. I have waters",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena 'water' tidak memiliki bentuk plural.",
                 },
               ]}
             />
@@ -177,9 +177,8 @@ export default function PresentSimplePage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Fokus pada kebiasaan sehari-hari dan fakta umum. Jika sudah
-              terbiasa, kamu akan otomatis tahu kapan harus pakai Present
-              Simple.
+              Kalau kamu ragu, bayangkan: “bisa dihitung satu-satu atau tidak?”
+              Kalau tidak bisa dihitung, berarti itu uncountable noun.
             </p>
           </motion.section>
         </div>
@@ -193,14 +192,14 @@ export default function PresentSimplePage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/SVOPatternPage")}
+            onClick={() => navigate("/beginner/FutureSimplePage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PresentContinuousPage")}
+            onClick={() => navigate("/beginner/ArticlesPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

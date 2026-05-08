@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
 import PanelLevel from "../../../components/grammar/PanelLevel";
 
 import Beginner from "../../../components/grammar/level/Beginner";
 import Intermediate from "../../../components/grammar/level/Intermediate";
 import Advance from "../../../components/grammar/level/Advance";
 
-import GrammarRoadmapSection from "../../../components/grammar/section3/GrammarRoadmapSection"
+import GrammarRoadmapSection from "../../../components/grammar/section3/GrammarRoadmapSection";
 
 const GrammarPage = () => {
   const [activeTab, setActiveTab] = useState("grammar1");
@@ -25,9 +27,13 @@ const GrammarPage = () => {
 
           {/* CONTENT */}
           <div className="relative flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 md:px-10">
-            <div
+            {/* Animated Text */}
+            <motion.div
               className="max-w-2xl lg:max-w-3xl"
               style={{ fontFamily: "Montserrat, sans-serif" }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-3 sm:mb-4">
                 Master English Grammar Easily
@@ -38,12 +44,17 @@ const GrammarPage = () => {
                 explanations, practical examples, and structured lessons
                 designed to improve your skills step by step.
               </p>
-            </div>
+            </motion.div>
 
-            {/* PANEL  */}
-            <div className="mt-6">
+            {/* Animated Panel */}
+            <motion.div
+              className="mt-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <PanelLevel activeTab={activeTab} setActiveTab={setActiveTab} />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -54,6 +65,7 @@ const GrammarPage = () => {
         {activeTab === "grammar2" && <Intermediate />}
         {activeTab === "grammar3" && <Advance />}
       </section>
+
       {/* SECTION 3 */}
       <GrammarRoadmapSection />
     </>

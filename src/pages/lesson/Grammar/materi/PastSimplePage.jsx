@@ -1,11 +1,10 @@
-// PresentSimplePage.jsx
 "use client";
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import TestPanel from "../../../../components/grammar/TestPanel1";
 
-export default function PresentSimplePage() {
+export default function PastSimplePage() {
   const navigate = useNavigate();
 
   return (
@@ -28,17 +27,16 @@ export default function PresentSimplePage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 3
+            Lesson 5
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Present Simple Tense Usage
+            Past Simple Tense Usage
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan memahami bagaimana Present Simple digunakan
-            dalam kehidupan sehari-hari untuk menyatakan kebiasaan, fakta umum,
-            dan rutinitas.
+            Di materi ini kamu akan belajar bagaimana menyatakan kejadian yang
+            sudah terjadi di masa lalu dan sudah selesai.
           </p>
         </motion.div>
 
@@ -52,17 +50,16 @@ export default function PresentSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Present Simple?
+              Apa itu Past Simple?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Present Simple adalah tense yang digunakan untuk menyatakan
-              kejadian yang terjadi secara rutin, fakta umum, atau sesuatu yang
-              selalu benar.
+              Past Simple digunakan untuk menceritakan aktivitas yang terjadi di
+              masa lalu dan sudah selesai pada waktu tertentu.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              Subject + Verb (base form / s/es)
+              Subject + Verb (past form / V2)
             </div>
           </motion.section>
 
@@ -80,16 +77,24 @@ export default function PresentSimplePage() {
 
             <ul className="mt-4 space-y-3 text-white/70">
               <li>
-                <span className="text-white font-medium">Kebiasaan</span> → I go
-                to school every day.
+                <span className="text-white font-medium">
+                  Kejadian yang sudah selesai
+                </span>{" "}
+                → I visited Bali last year.
               </li>
+
               <li>
-                <span className="text-white font-medium">Fakta umum</span> → The
-                sun rises in the east.
+                <span className="text-white font-medium">
+                  Aktivitas di waktu tertentu di masa lalu
+                </span>{" "}
+                → She cooked dinner yesterday.
               </li>
+
               <li>
-                <span className="text-white font-medium">Rutinitas</span> → She
-                drinks coffee every morning.
+                <span className="text-white font-medium">
+                  Cerita atau pengalaman masa lalu
+                </span>{" "}
+                → They watched a movie last night.
               </li>
             </ul>
           </motion.section>
@@ -107,9 +112,9 @@ export default function PresentSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I / You / We / They → verb dasar (eat, play, read)</p>
-              <p>• He / She / It → verb + s/es (eats, plays, reads)</p>
-              <p>• Kata keterangan waktu: always, usually, often, every day</p>
+              <p>• Verb regular → tambah -ed (play → played)</p>
+              <p>• Verb irregular → bentuk berubah (go → went, eat → ate)</p>
+              <p>• Biasanya digunakan dengan: yesterday, last night, ago</p>
             </div>
           </motion.section>
 
@@ -126,10 +131,10 @@ export default function PresentSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I eat rice every day</p>
-              <p>• She goes to school</p>
-              <p>• They play football every weekend</p>
-              <p>• The earth moves around the sun</p>
+              <p>• I visited my grandmother yesterday</p>
+              <p>• She went to school last Monday</p>
+              <p>• They played football last week</p>
+              <p>• We watched a movie last night</p>
             </div>
           </motion.section>
 
@@ -141,26 +146,28 @@ export default function PresentSimplePage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat Present Simple yang benar:"
+              question="Pilih kalimat Past Simple yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "a. She going to school",
-                  isCorrect: false,
+                  label: "A. She went to school yesterday",
+                  isCorrect: true,
                   feedback:
-                    "Salah karena ini bentuk continuous, bukan simple present.",
+                    "Benar karena 'went' adalah bentuk Past Simple dari 'go'.",
                 },
                 {
                   value: "b",
-                  label: "B. She go to school",
+                  label: "B. She goes to school yesterday",
                   isCorrect: false,
-                  feedback: "Salah karena He/She/It harus memakai verb + s/es.",
+                  feedback:
+                    "Salah karena 'goes' adalah Present Simple, bukan Past Simple.",
                 },
                 {
                   value: "c",
-                  label: "c. She goes to school",
-                  isCorrect: true,
-                  feedback: "Benar karena He/She/It menggunakan verb + s/es.",
+                  label: "C. She going to school yesterday",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena ini bentuk Present Continuous, bukan Past Simple.",
                 },
               ]}
             />
@@ -177,9 +184,8 @@ export default function PresentSimplePage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Fokus pada kebiasaan sehari-hari dan fakta umum. Jika sudah
-              terbiasa, kamu akan otomatis tahu kapan harus pakai Present
-              Simple.
+              Biasakan mengingat kata waktu (yesterday, last…, ago) karena itu
+              hampir selalu menunjukkan Past Simple.
             </p>
           </motion.section>
         </div>
@@ -193,14 +199,14 @@ export default function PresentSimplePage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/SVOPatternPage")}
+            onClick={() => navigate("/beginner/PresentContinuousPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PresentContinuousPage")}
+            onClick={() => navigate("/beginner/FutureSimplePage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya
