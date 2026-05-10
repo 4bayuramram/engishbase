@@ -1,10 +1,10 @@
-
+"use client";
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function AdverbsOfFrequencyPage() {
+export default function PrepositionsOfTimePage() {
   const navigate = useNavigate();
 
   return (
@@ -27,16 +27,17 @@ export default function AdverbsOfFrequencyPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 12
+            Lesson 13
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Adverbs of Frequency
+            Prepositions of Time
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar kata keterangan yang menunjukkan
-            seberapa sering suatu aktivitas dilakukan.
+            Di materi ini kamu akan belajar penggunaan prepositions of time
+            seperti <strong>in</strong>, <strong>on</strong>, dan{" "}
+            <strong>at</strong> untuk menunjukkan waktu dalam bahasa Inggris.
           </p>
         </motion.div>
 
@@ -50,16 +51,16 @@ export default function AdverbsOfFrequencyPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Adverbs of Frequency?
+              Apa itu Prepositions of Time?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Adverbs of frequency adalah kata keterangan yang menjelaskan
-              seberapa sering sesuatu terjadi dalam sebuah kalimat.
+              Prepositions of time adalah kata depan yang digunakan untuk
+              menjelaskan waktu terjadinya suatu aktivitas atau kejadian.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              always / usually / often / sometimes / rarely / never
+              in / on / at
             </div>
           </motion.section>
 
@@ -75,13 +76,47 @@ export default function AdverbsOfFrequencyPage() {
               Penjelasan Penggunaan
             </h2>
 
-            <div className="mt-4 space-y-3 text-white/70">
-              <p>• Always → selalu (100%)</p>
-              <p>• Usually → biasanya (70–90%)</p>
-              <p>• Often → sering</p>
-              <p>• Sometimes → kadang-kadang</p>
-              <p>• Rarely → jarang</p>
-              <p>• Never → tidak pernah (0%)</p>
+            <div className="mt-6 space-y-6 text-white/70">
+              <div>
+                <h3 className="font-semibold text-white text-lg">1. In</h3>
+                <p className="mt-2">
+                  Digunakan untuk bulan, tahun, musim, dan periode waktu yang
+                  panjang.
+                </p>
+
+                <div className="mt-3 space-y-2">
+                  <p>• in January</p>
+                  <p>• in 2025</p>
+                  <p>• in the morning</p>
+                  <p>• in summer</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-white text-lg">2. On</h3>
+                <p className="mt-2">
+                  Digunakan untuk hari dan tanggal tertentu.
+                </p>
+
+                <div className="mt-3 space-y-2">
+                  <p>• on Monday</p>
+                  <p>• on my birthday</p>
+                  <p>• on 17 August</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-white text-lg">3. At</h3>
+                <p className="mt-2">
+                  Digunakan untuk jam atau waktu yang spesifik.
+                </p>
+
+                <div className="mt-3 space-y-2">
+                  <p>• at 7 o’clock</p>
+                  <p>• at noon</p>
+                  <p>• at night</p>
+                </div>
+              </div>
             </div>
           </motion.section>
 
@@ -98,9 +133,10 @@ export default function AdverbsOfFrequencyPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Biasanya ditempatkan sebelum verb utama</p>
-              <p>• Tapi setelah “to be” (am/is/are)</p>
-              <p>• Contoh: She always goes to school</p>
+              <p>• Gunakan "in" untuk waktu yang umum atau panjang</p>
+              <p>• Gunakan "on" untuk hari dan tanggal spesifik</p>
+              <p>• Gunakan "at" untuk jam atau waktu yang tepat</p>
+              <p>• Jangan tertukar antara "in the morning" dan "at night"</p>
             </div>
           </motion.section>
 
@@ -117,10 +153,10 @@ export default function AdverbsOfFrequencyPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I always wake up early</p>
-              <p>• She usually drinks coffee</p>
-              <p>• They often play football</p>
-              <p>• We sometimes go to the beach</p>
+              <p>• I was born in 2005</p>
+              <p>• We study English on Monday</p>
+              <p>• She wakes up at 5 a.m.</p>
+              <p>• They play football in the afternoon</p>
             </div>
           </motion.section>
 
@@ -132,28 +168,25 @@ export default function AdverbsOfFrequencyPage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat Adverbs of Frequency yang benar:"
+              question="Pilih penggunaan preposition of time yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. She goes always to school",
+                  label: "A. I go to school at Monday",
                   isCorrect: false,
-                  feedback:
-                    "Salah karena adverb 'always' harus ditempatkan sebelum verb utama.",
+                  feedback: "Salah karena hari menggunakan preposition 'on'.",
                 },
                 {
                   value: "b",
-                  label: "B. She goes to always school",
-                  isCorrect: false,
-                  feedback:
-                    "Salah karena posisi adverb tidak sesuai aturan grammar.",
+                  label: "B. I go to school on Monday",
+                  isCorrect: true,
+                  feedback: "Benar karena 'on' digunakan untuk hari tertentu.",
                 },
                 {
                   value: "c",
-                  label: "C. She always goes to school",
-                  isCorrect: true,
-                  feedback:
-                    "Benar karena adverb of frequency ditempatkan sebelum verb utama.",
+                  label: "C. I go to school in 7 o’clock",
+                  isCorrect: false,
+                  feedback: "Salah karena jam menggunakan preposition 'at'.",
                 },
               ]}
             />
@@ -170,8 +203,10 @@ export default function AdverbsOfFrequencyPage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Ingat pola sederhana: Subject + Adverb + Verb. Ini akan membantu
-              kamu tidak salah posisi kata.
+              Cara mudah mengingat:
+              <br />• <strong>In</strong> → waktu panjang
+              <br />• <strong>On</strong> → hari & tanggal
+              <br />• <strong>At</strong> → jam spesifik
             </p>
           </motion.section>
         </div>
@@ -185,14 +220,14 @@ export default function AdverbsOfFrequencyPage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/AdjectivesComparativesPage")}
+            onClick={() => navigate("/beginner/AdverbsOfFrequencyPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PrepositionsOfTimePage")}
+            onClick={() => navigate("/beginner/PrepositionsOfPlacePage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

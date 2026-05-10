@@ -6,6 +6,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [practiceOpen, setPracticeOpen] = useState(false);
 
+  const glowStyle = {
+    textShadow: "0 0 6px rgba(255,255,255,0.9), 0 0 12px rgba(255,255,255,0.6)",
+  };
+
+  const noGlowHover = {
+    textShadow: "none",
+  };
+
   return (
     <nav
       className="w-full fixed top-0 left-0 z-50"
@@ -26,6 +34,8 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-gray-900 font-bold text-lg tracking-tight"
+            style={glowStyle}
+            whileHover={noGlowHover}
           >
             English<span className="text-blue-500">Base</span>
           </motion.div>
@@ -34,8 +44,9 @@ export default function Navbar() {
           <div className="hidden md:flex gap-8 text-sm text-gray-700 items-center">
             <Link to="/">
               <motion.span
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, ...noGlowHover }}
                 className="hover:text-blue-500"
+                style={glowStyle}
               >
                 Home
               </motion.span>
@@ -43,8 +54,9 @@ export default function Navbar() {
 
             <Link to="/pre-grammar">
               <motion.span
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, ...noGlowHover }}
                 className="hover:text-blue-500"
+                style={glowStyle}
               >
                 Pre-Grammar
               </motion.span>
@@ -52,8 +64,9 @@ export default function Navbar() {
 
             <Link to="/grammar-page">
               <motion.span
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05, ...noGlowHover }}
                 className="hover:text-blue-500"
+                style={glowStyle}
               >
                 Grammar
               </motion.span>
@@ -65,6 +78,8 @@ export default function Navbar() {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setPracticeOpen(!practiceOpen)}
                 className="hover:text-blue-500"
+                style={glowStyle}
+                whileHover={noGlowHover}
               >
                 Practice ▾
               </motion.button>
@@ -110,6 +125,8 @@ export default function Navbar() {
             whileTap={{ scale: 0.9 }}
             onClick={() => setOpen(!open)}
             className="md:hidden text-xl text-gray-800"
+            style={glowStyle}
+            whileHover={noGlowHover}
           >
             ☰
           </motion.button>
@@ -130,13 +147,23 @@ export default function Navbar() {
                 flex flex-col gap-3 text-sm
               "
             >
-              <Link to="/" onClick={() => setOpen(false)}>
+              <Link to="/" onClick={() => setOpen(false)} style={glowStyle}>
                 Home
               </Link>
-              <Link to="/pre-grammar" onClick={() => setOpen(false)}>
+
+              <Link
+                to="/pre-grammar"
+                onClick={() => setOpen(false)}
+                style={glowStyle}
+              >
                 Pre-Grammar
               </Link>
-              <Link to="/grammar-page" onClick={() => setOpen(false)}>
+
+              <Link
+                to="/grammar-page"
+                onClick={() => setOpen(false)}
+                style={glowStyle}
+              >
                 Grammar
               </Link>
 
@@ -145,6 +172,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setPracticeOpen(!practiceOpen)}
                   className="w-full text-left"
+                  style={glowStyle}
                 >
                   Practice ▾
                 </button>
@@ -160,11 +188,16 @@ export default function Navbar() {
                       <Link
                         to="/practice/reading"
                         onClick={() => setOpen(false)}
+                        style={glowStyle}
                       >
                         Reading
                       </Link>
 
-                      <Link to="/practice/quiz" onClick={() => setOpen(false)}>
+                      <Link
+                        to="/practice/quiz"
+                        onClick={() => setOpen(false)}
+                        style={glowStyle}
+                      >
                         Quiz (Soon)
                       </Link>
                     </motion.div>

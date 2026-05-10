@@ -2,9 +2,9 @@
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function ArticlesPage() {
+export default function PossessivePronounsPage() {
   const navigate = useNavigate();
 
   return (
@@ -27,16 +27,17 @@ export default function ArticlesPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 8
+            Lesson 10
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Articles (A, An, The)
+            Possessive Pronouns
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar cara menggunakan “a”, “an”, dan
-            “the” dengan benar dalam kalimat bahasa Inggris.
+            Di materi ini kamu akan belajar kata ganti kepemilikan yang
+            digunakan untuk menunjukkan kepunyaan tanpa menyebut nama benda
+            berulang-ulang.
           </p>
         </motion.div>
 
@@ -50,16 +51,16 @@ export default function ArticlesPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Articles?
+              Apa itu Possessive Pronouns?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Articles adalah kata kecil yang digunakan sebelum noun (kata
-              benda) untuk menjelaskan apakah benda tersebut umum atau spesifik.
+              Possessive pronouns adalah kata ganti yang menunjukkan kepemilikan
+              tanpa perlu menyebut noun setelahnya.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              A / An = umum | The = spesifik
+              mine / yours / his / hers / ours / theirs
             </div>
           </motion.section>
 
@@ -76,25 +77,16 @@ export default function ArticlesPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>
-                • <span className="text-white font-medium">A</span> → digunakan
-                sebelum kata benda tunggal yang dimulai dengan konsonan (a book)
-              </p>
-
-              <p>
-                • <span className="text-white font-medium">An</span> → digunakan
-                sebelum kata benda yang dimulai dengan vokal (an apple)
-              </p>
-
-              <p>
-                • <span className="text-white font-medium">The</span> →
-                digunakan untuk sesuatu yang sudah jelas atau spesifik (the book
-                on the table)
-              </p>
+              <p>• Mine → milikku</p>
+              <p>• Yours → milikmu</p>
+              <p>• His → miliknya (laki-laki)</p>
+              <p>• Hers → miliknya (perempuan)</p>
+              <p>• Ours → milik kita</p>
+              <p>• Theirs → milik mereka</p>
             </div>
           </motion.section>
 
-          {/* Grammar Rule */}
+          {/* Difference */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -103,16 +95,15 @@ export default function ArticlesPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Aturan Penting
+              Perbedaan Penting
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• A → sebelum bunyi konsonan (a car, a dog)</p>
-              <p>• An → sebelum bunyi vokal (an egg, an hour)</p>
+              <p>• This is my book → Possessive adjective (diikuti noun)</p>
               <p>
-                • The → untuk sesuatu yang sudah diketahui pembicara dan lawan
-                bicara
+                • This book is mine → Possessive pronoun (tidak diikuti noun)
               </p>
+              <p>• Jadi possessive pronoun berdiri sendiri</p>
             </div>
           </motion.section>
 
@@ -129,10 +120,10 @@ export default function ArticlesPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I have a book</p>
-              <p>• She eats an apple</p>
-              <p>• The sun is bright</p>
-              <p>• I saw a cat in the garden</p>
+              <p>• This phone is mine</p>
+              <p>• The bag is hers</p>
+              <p>• The house is ours</p>
+              <p>• The car is theirs</p>
             </div>
           </motion.section>
 
@@ -144,28 +135,28 @@ export default function ArticlesPage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat penggunaan article yang benar:"
+              question="Pilih kalimat possessive pronoun yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. I saw an dog in the park",
-                  isCorrect: false,
+                  label: "A. This book is mine",
+                  isCorrect: true,
                   feedback:
-                    "Salah karena 'dog' diawali konsonan, jadi harus 'a dog'.",
+                    "Benar karena 'mine' menunjukkan kepemilikan tanpa perlu noun setelahnya.",
                 },
                 {
                   value: "b",
-                  label: "B. I saw a dog in the park",
-                  isCorrect: true,
+                  label: "B. This is my is book",
+                  isCorrect: false,
                   feedback:
-                    "Benar karena 'dog' diawali konsonan sehingga menggunakan 'a'.",
+                    "Salah karena struktur kalimat tidak benar secara grammar.",
                 },
                 {
                   value: "c",
-                  label: "C. I saw dog in park",
+                  label: "C. This mine book is",
                   isCorrect: false,
                   feedback:
-                    "Salah karena kalimat membutuhkan article untuk noun tunggal.",
+                    "Salah karena urutan kata tidak sesuai struktur bahasa Inggris.",
                 },
               ]}
             />
@@ -182,8 +173,8 @@ export default function ArticlesPage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Fokus pada suara awal kata (bunyi vokal atau konsonan), bukan
-              hanya hurufnya. Itu kunci utama penggunaan a dan an.
+              Kalau ada kata seperti mine, yours, hers, itu tidak perlu diikuti
+              kata benda lagi. Itu sudah berdiri sendiri sebagai pemilik.
             </p>
           </motion.section>
         </div>
@@ -197,14 +188,14 @@ export default function ArticlesPage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/CountableUncountablePage")}
+            onClick={() => navigate("/beginner/PronounsPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PronounsPage")}
+            onClick={() => navigate("/beginner/AdjectivesComparativesPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

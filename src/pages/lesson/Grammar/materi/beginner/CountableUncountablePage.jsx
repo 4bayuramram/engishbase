@@ -2,9 +2,9 @@
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function PrepositionsOfTimePage() {
+export default function CountableUncountablePage() {
   const navigate = useNavigate();
 
   return (
@@ -27,17 +27,16 @@ export default function PrepositionsOfTimePage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 13
+            Lesson 7
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Prepositions of Time
+            Countable & Uncountable Nouns
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar penggunaan prepositions of time
-            seperti <strong>in</strong>, <strong>on</strong>, dan{" "}
-            <strong>at</strong> untuk menunjukkan waktu dalam bahasa Inggris.
+            Di materi ini kamu akan belajar perbedaan kata benda yang bisa
+            dihitung dan yang tidak bisa dihitung dalam bahasa Inggris.
           </p>
         </motion.div>
 
@@ -51,16 +50,17 @@ export default function PrepositionsOfTimePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Prepositions of Time?
+              Apa itu Countable & Uncountable?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Prepositions of time adalah kata depan yang digunakan untuk
-              menjelaskan waktu terjadinya suatu aktivitas atau kejadian.
+              Countable nouns adalah kata benda yang bisa dihitung satu per
+              satu. Uncountable nouns adalah kata benda yang tidak bisa dihitung
+              secara langsung tanpa ukuran tertentu.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              in / on / at
+              Countable = bisa dihitung | Uncountable = tidak bisa dihitung
             </div>
           </motion.section>
 
@@ -73,50 +73,22 @@ export default function PrepositionsOfTimePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Penjelasan Penggunaan
+              Penjelasan Sederhana
             </h2>
 
-            <div className="mt-6 space-y-6 text-white/70">
-              <div>
-                <h3 className="font-semibold text-white text-lg">1. In</h3>
-                <p className="mt-2">
-                  Digunakan untuk bulan, tahun, musim, dan periode waktu yang
-                  panjang.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• in January</p>
-                  <p>• in 2025</p>
-                  <p>• in the morning</p>
-                  <p>• in summer</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">2. On</h3>
-                <p className="mt-2">
-                  Digunakan untuk hari dan tanggal tertentu.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• on Monday</p>
-                  <p>• on my birthday</p>
-                  <p>• on 17 August</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">3. At</h3>
-                <p className="mt-2">
-                  Digunakan untuk jam atau waktu yang spesifik.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• at 7 o’clock</p>
-                  <p>• at noon</p>
-                  <p>• at night</p>
-                </div>
-              </div>
+            <div className="mt-4 space-y-3 text-white/70">
+              <p>
+                • <span className="text-white font-medium">Countable</span> →
+                apple, book, car (bisa 1, 2, 3)
+              </p>
+              <p>
+                • <span className="text-white font-medium">Uncountable</span> →
+                water, rice, sugar (tidak dihitung satuan langsung)
+              </p>
+              <p>
+                • Uncountable biasanya butuh ukuran: a glass of water, a bowl of
+                rice
+              </p>
             </div>
           </motion.section>
 
@@ -133,10 +105,9 @@ export default function PrepositionsOfTimePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Gunakan "in" untuk waktu yang umum atau panjang</p>
-              <p>• Gunakan "on" untuk hari dan tanggal spesifik</p>
-              <p>• Gunakan "at" untuk jam atau waktu yang tepat</p>
-              <p>• Jangan tertukar antara "in the morning" dan "at night"</p>
+              <p>• Countable → bisa pakai a/an, plural (books, apples)</p>
+              <p>• Uncountable → tidak pakai a/an, tidak punya bentuk plural</p>
+              <p>• Gunakan some / a little untuk uncountable nouns</p>
             </div>
           </motion.section>
 
@@ -153,10 +124,10 @@ export default function PrepositionsOfTimePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I was born in 2005</p>
-              <p>• We study English on Monday</p>
-              <p>• She wakes up at 5 a.m.</p>
-              <p>• They play football in the afternoon</p>
+              <p>• I have two books (countable)</p>
+              <p>• She drinks some water (uncountable)</p>
+              <p>• They buy three apples (countable)</p>
+              <p>• We need a little sugar (uncountable)</p>
             </div>
           </motion.section>
 
@@ -168,25 +139,28 @@ export default function PrepositionsOfTimePage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih penggunaan preposition of time yang benar:"
+              question="Pilih kalimat yang benar tentang countable/uncountable noun:"
               options={[
                 {
                   value: "a",
-                  label: "A. I go to school at Monday",
-                  isCorrect: false,
-                  feedback: "Salah karena hari menggunakan preposition 'on'.",
+                  label: "A. I have some water",
+                  isCorrect: true,
+                  feedback:
+                    "Benar karena 'water' adalah uncountable noun dan cocok menggunakan 'some'.",
                 },
                 {
                   value: "b",
-                  label: "B. I go to school on Monday",
-                  isCorrect: true,
-                  feedback: "Benar karena 'on' digunakan untuk hari tertentu.",
+                  label: "B. I have a water",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena 'water' tidak bisa digunakan dengan 'a'.",
                 },
                 {
                   value: "c",
-                  label: "C. I go to school in 7 o’clock",
+                  label: "C. I have waters",
                   isCorrect: false,
-                  feedback: "Salah karena jam menggunakan preposition 'at'.",
+                  feedback:
+                    "Salah karena 'water' tidak memiliki bentuk plural.",
                 },
               ]}
             />
@@ -203,10 +177,8 @@ export default function PrepositionsOfTimePage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Cara mudah mengingat:
-              <br />• <strong>In</strong> → waktu panjang
-              <br />• <strong>On</strong> → hari & tanggal
-              <br />• <strong>At</strong> → jam spesifik
+              Kalau kamu ragu, bayangkan: “bisa dihitung satu-satu atau tidak?”
+              Kalau tidak bisa dihitung, berarti itu uncountable noun.
             </p>
           </motion.section>
         </div>
@@ -220,14 +192,14 @@ export default function PrepositionsOfTimePage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/AdverbsOfFrequencyPage")}
+            onClick={() => navigate("/beginner/FutureSimplePage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PrepositionsOfPlacePage")}
+            onClick={() => navigate("/beginner/ArticlesPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

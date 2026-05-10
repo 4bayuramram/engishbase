@@ -1,10 +1,11 @@
+// PresentSimplePage.jsx
 "use client";
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function FutureSimplePage() {
+export default function PresentSimplePage() {
   const navigate = useNavigate();
 
   return (
@@ -27,16 +28,17 @@ export default function FutureSimplePage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 6
+            Lesson 3
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Future Simple Tense (Will / Going To)
+            Present Simple Tense Usage
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar bagaimana menyatakan rencana atau
-            kejadian yang akan terjadi di masa depan.
+            Di materi ini kamu akan memahami bagaimana Present Simple digunakan
+            dalam kehidupan sehari-hari untuk menyatakan kebiasaan, fakta umum,
+            dan rutinitas.
           </p>
         </motion.div>
 
@@ -50,16 +52,17 @@ export default function FutureSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Future Simple?
+              Apa itu Present Simple?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Future Simple digunakan untuk menyatakan keputusan spontan,
-              prediksi, atau rencana masa depan yang sudah dipastikan.
+              Present Simple adalah tense yang digunakan untuk menyatakan
+              kejadian yang terjadi secara rutin, fakta umum, atau sesuatu yang
+              selalu benar.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              Subject + will + Verb (base form) / Subject + going to + Verb
+              Subject + Verb (base form / s/es)
             </div>
           </motion.section>
 
@@ -77,24 +80,16 @@ export default function FutureSimplePage() {
 
             <ul className="mt-4 space-y-3 text-white/70">
               <li>
-                <span className="text-white font-medium">
-                  Keputusan spontan
-                </span>{" "}
-                → I will help you.
+                <span className="text-white font-medium">Kebiasaan</span> → I go
+                to school every day.
               </li>
-
               <li>
-                <span className="text-white font-medium">
-                  Prediksi masa depan
-                </span>{" "}
-                → It will rain tomorrow.
+                <span className="text-white font-medium">Fakta umum</span> → The
+                sun rises in the east.
               </li>
-
               <li>
-                <span className="text-white font-medium">
-                  Rencana yang sudah pasti
-                </span>{" "}
-                → I am going to study tonight.
+                <span className="text-white font-medium">Rutinitas</span> → She
+                drinks coffee every morning.
               </li>
             </ul>
           </motion.section>
@@ -108,16 +103,13 @@ export default function FutureSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Perbedaan Will vs Going To
+              Aturan Penting
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Will → spontan, keputusan saat berbicara</p>
-              <p>• Going to → rencana yang sudah dipikirkan sebelumnya</p>
-              <p>
-                • Contoh: I will call you (sekarang memutuskan) vs I am going to
-                call you (sudah direncanakan)
-              </p>
+              <p>• I / You / We / They → verb dasar (eat, play, read)</p>
+              <p>• He / She / It → verb + s/es (eats, plays, reads)</p>
+              <p>• Kata keterangan waktu: always, usually, often, every day</p>
             </div>
           </motion.section>
 
@@ -134,10 +126,10 @@ export default function FutureSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I will buy a new phone</p>
-              <p>• She will visit her friend tomorrow</p>
-              <p>• We are going to travel next week</p>
-              <p>• They are going to start a new project</p>
+              <p>• I eat rice every day</p>
+              <p>• She goes to school</p>
+              <p>• They play football every weekend</p>
+              <p>• The earth moves around the sun</p>
             </div>
           </motion.section>
 
@@ -149,28 +141,26 @@ export default function FutureSimplePage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat Future Simple yang benar:"
+              question="Pilih kalimat Present Simple yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. She will goes to school tomorrow",
+                  label: "a. She going to school",
                   isCorrect: false,
                   feedback:
-                    "Salah karena setelah 'will' harus menggunakan verb dasar (go, bukan goes).",
+                    "Salah karena ini bentuk continuous, bukan simple present.",
                 },
                 {
                   value: "b",
-                  label: "B. She goes to school tomorrow",
+                  label: "B. She go to school",
                   isCorrect: false,
-                  feedback:
-                    "Salah karena ini Present Simple, bukan Future Simple.",
+                  feedback: "Salah karena He/She/It harus memakai verb + s/es.",
                 },
                 {
                   value: "c",
-                  label: "C. She will go to school tomorrow",
+                  label: "c. She goes to school",
                   isCorrect: true,
-                  feedback:
-                    "Benar karena 'will + verb base form' digunakan untuk Future Simple.",
+                  feedback: "Benar karena He/She/It menggunakan verb + s/es.",
                 },
               ]}
             />
@@ -187,8 +177,9 @@ export default function FutureSimplePage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Ingat: setelah “will” tidak pernah ada “-s” atau “-ed”. Selalu
-              gunakan bentuk dasar verb.
+              Fokus pada kebiasaan sehari-hari dan fakta umum. Jika sudah
+              terbiasa, kamu akan otomatis tahu kapan harus pakai Present
+              Simple.
             </p>
           </motion.section>
         </div>
@@ -202,14 +193,14 @@ export default function FutureSimplePage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/PastSimplePage")}
+            onClick={() => navigate("/beginner/SVOPatternPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/CountableUncountablePage")}
+            onClick={() => navigate("/beginner/PresentContinuousPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

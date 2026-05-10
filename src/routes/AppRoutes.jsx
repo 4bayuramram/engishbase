@@ -18,30 +18,32 @@ import Past from "../pages/lesson/Past";
 import DidntVsNot from "../pages/lesson/DidntVsNot";
 
 
-// path materi Grammar
-import GrammarIntroPage from "../pages/lesson/Grammar/materi/GrammarIntroPage";
-import SVOPatternPage from "../pages/lesson/Grammar/materi/SVOPatternPage";
-import PresentSimplePage from "../pages/lesson/Grammar/materi/PresentSimplePage";
-import PresentContinuousPage from "../pages/lesson/Grammar/materi/PresentContinuousPage";
-import PastSimplePage from "../pages/lesson/Grammar/materi/PastSimplePage";
-import FutureSimplePage from "../pages/lesson/Grammar/materi/FutureSimplePage";
-import CountableUncountablePage from "../pages/lesson/Grammar/materi/CountableUncountablePage";
-import ArticlesPage from "../pages/lesson/Grammar/materi/ArticlesPage";
-import PronounsPage from "../pages/lesson/Grammar/materi/PronounsPage";
-import PossessivePronounsPage from "../pages/lesson/Grammar/materi/PossessivePronounsPage";
-import AdjectivesComparativesPage from "../pages/lesson/Grammar/materi/AdjectivesComparativesPage";
-import AdverbsOfFrequencyPage from "../pages/lesson/Grammar/materi/AdverbsOfFrequencyPage";
-import PrepositionsOfTimePage from "../pages/lesson/Grammar/materi/PrepositionsOfTimePage";
-import PrepositionsOfPlacePage from "../pages/lesson/Grammar/materi/PrepositionsOfPlacePage";
-import YesNoQuestionsFormationPage from "../pages/lesson/Grammar/materi/YesNoQuestionsFormationPage";
-import WhQuestionsPage from "../pages/lesson/Grammar/materi/WhQuestionsPage";
-import BasicConjunctionsPage from "../pages/lesson/Grammar/materi/BasicConjunctionsPage";
-import ImperativesPage from "../pages/lesson/Grammar/materi/ImperativesPage";
-import ModalVerbsBasicsPage from "../pages/lesson/Grammar/materi/ModalVerbsBasicsPage";
-import ConditionalsType0Page from "../pages/lesson/Grammar/materi/ConditionalsType0Page";
+// path materi Grammar beginner
+import GrammarIntroPage from "../pages/lesson/Grammar/materi/beginner/GrammarIntroPage";
+import SVOPatternPage from "../pages/lesson/Grammar/materi/beginner/SVOPatternPage";
+import PresentSimplePage from "../pages/lesson/Grammar/materi/beginner/PresentSimplePage";
+import PresentContinuousPage from "../pages/lesson/Grammar/materi/beginner/PresentContinuousPage";
+import PastSimplePage from "../pages/lesson/Grammar/materi/beginner/PastSimplePage";
+import FutureSimplePage from "../pages/lesson/Grammar/materi/beginner/FutureSimplePage";
+import CountableUncountablePage from "../pages/lesson/Grammar/materi/beginner/CountableUncountablePage";
+import ArticlesPage from "../pages/lesson/Grammar/materi/beginner/ArticlesPage";
+import PronounsPage from "../pages/lesson/Grammar/materi/beginner/PronounsPage";
+import PossessivePronounsPage from "../pages/lesson/Grammar/materi/beginner/PossessivePronounsPage";
+import AdjectivesComparativesPage from "../pages/lesson/Grammar/materi/beginner/AdjectivesComparativesPage";
+import AdverbsOfFrequencyPage from "../pages/lesson/Grammar/materi/beginner/AdverbsOfFrequencyPage";
+import PrepositionsOfTimePage from "../pages/lesson/Grammar/materi/beginner/PrepositionsOfTimePage";
+import PrepositionsOfPlacePage from "../pages/lesson/Grammar/materi/beginner/PrepositionsOfPlacePage";
+import YesNoQuestionsFormationPage from "../pages/lesson/Grammar/materi/beginner/YesNoQuestionsFormationPage";
+import WhQuestionsPage from "../pages/lesson/Grammar/materi/beginner/WhQuestionsPage";
+import BasicConjunctionsPage from "../pages/lesson/Grammar/materi/beginner/BasicConjunctionsPage";
+import ImperativesPage from "../pages/lesson/Grammar/materi/beginner/ImperativesPage";
+import ModalVerbsBasicsPage from "../pages/lesson/Grammar/materi/beginner/ModalVerbsBasicsPage";
+import ConditionalsType0Page from "../pages/lesson/Grammar/materi/beginner/ConditionalsType0Page";
 
-
-
+// path materi Grammar intermediate
+import IntermediateGrammarPage1 from "../pages/lesson/Grammar/materi/intermediate/IntermediateGrammarPage1";
+import PastPerfectTensePage from "../pages/lesson/Grammar/materi/intermediate/PastPerfectTensePage";
+;
 
 
 
@@ -119,6 +121,15 @@ export default function AppRoutes() {
       <Route
         path="/beginner/ConditionalsType0Page"
         element={<ConditionalsType0Page />}
+      />
+      {/* routes materi grammar - intermediate */}
+      <Route
+        path="/intermediate/IntermediateGrammarPage1"
+        element={<IntermediateGrammarPage1 />}
+      />
+      <Route
+        path="/intermediate/PastPerfectTensePage"
+        element={<PastPerfectTensePage />}
       />
 
       {/* routes halaman baca  */}

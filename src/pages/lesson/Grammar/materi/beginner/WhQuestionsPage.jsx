@@ -2,7 +2,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
 export default function WhQuestionsPage() {
   const navigate = useNavigate();

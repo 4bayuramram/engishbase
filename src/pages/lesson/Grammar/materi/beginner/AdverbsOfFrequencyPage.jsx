@@ -1,11 +1,10 @@
-// PresentSimplePage.jsx
-"use client";
+
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function PresentSimplePage() {
+export default function AdverbsOfFrequencyPage() {
   const navigate = useNavigate();
 
   return (
@@ -28,17 +27,16 @@ export default function PresentSimplePage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 3
+            Lesson 12
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Present Simple Tense Usage
+            Adverbs of Frequency
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan memahami bagaimana Present Simple digunakan
-            dalam kehidupan sehari-hari untuk menyatakan kebiasaan, fakta umum,
-            dan rutinitas.
+            Di materi ini kamu akan belajar kata keterangan yang menunjukkan
+            seberapa sering suatu aktivitas dilakukan.
           </p>
         </motion.div>
 
@@ -52,21 +50,20 @@ export default function PresentSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Present Simple?
+              Apa itu Adverbs of Frequency?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Present Simple adalah tense yang digunakan untuk menyatakan
-              kejadian yang terjadi secara rutin, fakta umum, atau sesuatu yang
-              selalu benar.
+              Adverbs of frequency adalah kata keterangan yang menjelaskan
+              seberapa sering sesuatu terjadi dalam sebuah kalimat.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              Subject + Verb (base form / s/es)
+              always / usually / often / sometimes / rarely / never
             </div>
           </motion.section>
 
-          {/* Usage */}
+          {/* Explanation */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,23 +72,17 @@ export default function PresentSimplePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Kapan digunakan?
+              Penjelasan Penggunaan
             </h2>
 
-            <ul className="mt-4 space-y-3 text-white/70">
-              <li>
-                <span className="text-white font-medium">Kebiasaan</span> → I go
-                to school every day.
-              </li>
-              <li>
-                <span className="text-white font-medium">Fakta umum</span> → The
-                sun rises in the east.
-              </li>
-              <li>
-                <span className="text-white font-medium">Rutinitas</span> → She
-                drinks coffee every morning.
-              </li>
-            </ul>
+            <div className="mt-4 space-y-3 text-white/70">
+              <p>• Always → selalu (100%)</p>
+              <p>• Usually → biasanya (70–90%)</p>
+              <p>• Often → sering</p>
+              <p>• Sometimes → kadang-kadang</p>
+              <p>• Rarely → jarang</p>
+              <p>• Never → tidak pernah (0%)</p>
+            </div>
           </motion.section>
 
           {/* Grammar Rule */}
@@ -107,9 +98,9 @@ export default function PresentSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I / You / We / They → verb dasar (eat, play, read)</p>
-              <p>• He / She / It → verb + s/es (eats, plays, reads)</p>
-              <p>• Kata keterangan waktu: always, usually, often, every day</p>
+              <p>• Biasanya ditempatkan sebelum verb utama</p>
+              <p>• Tapi setelah “to be” (am/is/are)</p>
+              <p>• Contoh: She always goes to school</p>
             </div>
           </motion.section>
 
@@ -126,10 +117,10 @@ export default function PresentSimplePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I eat rice every day</p>
-              <p>• She goes to school</p>
-              <p>• They play football every weekend</p>
-              <p>• The earth moves around the sun</p>
+              <p>• I always wake up early</p>
+              <p>• She usually drinks coffee</p>
+              <p>• They often play football</p>
+              <p>• We sometimes go to the beach</p>
             </div>
           </motion.section>
 
@@ -141,26 +132,28 @@ export default function PresentSimplePage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat Present Simple yang benar:"
+              question="Pilih kalimat Adverbs of Frequency yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "a. She going to school",
+                  label: "A. She goes always to school",
                   isCorrect: false,
                   feedback:
-                    "Salah karena ini bentuk continuous, bukan simple present.",
+                    "Salah karena adverb 'always' harus ditempatkan sebelum verb utama.",
                 },
                 {
                   value: "b",
-                  label: "B. She go to school",
+                  label: "B. She goes to always school",
                   isCorrect: false,
-                  feedback: "Salah karena He/She/It harus memakai verb + s/es.",
+                  feedback:
+                    "Salah karena posisi adverb tidak sesuai aturan grammar.",
                 },
                 {
                   value: "c",
-                  label: "c. She goes to school",
+                  label: "C. She always goes to school",
                   isCorrect: true,
-                  feedback: "Benar karena He/She/It menggunakan verb + s/es.",
+                  feedback:
+                    "Benar karena adverb of frequency ditempatkan sebelum verb utama.",
                 },
               ]}
             />
@@ -177,9 +170,8 @@ export default function PresentSimplePage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Fokus pada kebiasaan sehari-hari dan fakta umum. Jika sudah
-              terbiasa, kamu akan otomatis tahu kapan harus pakai Present
-              Simple.
+              Ingat pola sederhana: Subject + Adverb + Verb. Ini akan membantu
+              kamu tidak salah posisi kata.
             </p>
           </motion.section>
         </div>
@@ -193,14 +185,14 @@ export default function PresentSimplePage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/SVOPatternPage")}
+            onClick={() => navigate("/beginner/AdjectivesComparativesPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PresentContinuousPage")}
+            onClick={() => navigate("/beginner/PrepositionsOfTimePage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

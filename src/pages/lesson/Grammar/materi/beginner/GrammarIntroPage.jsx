@@ -1,12 +1,13 @@
-//SVOPatternPage no.2
+// GrammarIntroPage no 1
 "use client";
 import { useNavigate } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function SVOPatternPage() {
+export default function GrammarIntroPage() {
   const navigate = useNavigate();
+
 
   return (
     <main
@@ -28,22 +29,23 @@ export default function SVOPatternPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 2
+            Beginner Lesson
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Basic Sentence Structure (SVO Pattern)
+            Introduction to English Grammar
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar bagaimana menyusun kalimat dasar
-            dalam bahasa Inggris menggunakan pola Subject + Verb + Object.
+            Selamat datang 👋 Di sini kamu akan mulai memahami dasar grammar
+            bahasa Inggris dengan cara yang sederhana, santai, dan mudah
+            dimengerti.
           </p>
         </motion.div>
 
-        {/* Content */}
+        {/* Content Section */}
         <div className="mt-16 space-y-10">
-          {/* Concept */}
+          {/* What is Grammar */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,20 +54,18 @@ export default function SVOPatternPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu SVO Pattern?
+              Apa itu Grammar?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              SVO adalah pola paling dasar dalam bahasa Inggris yang digunakan
-              untuk membentuk kalimat sederhana dan jelas.
+              Grammar adalah kumpulan aturan yang membantu kita menyusun kata
+              menjadi kalimat yang benar. Ibaratnya, grammar itu seperti “peta”
+              yang membuat kita tidak tersesat saat berbicara atau menulis
+              bahasa Inggris.
             </p>
-
-            <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              Subject + Verb + Object
-            </div>
           </motion.section>
 
-          {/* Explanation */}
+          {/* Why important */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,26 +74,18 @@ export default function SVOPatternPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Penjelasan Setiap Bagian
+              Kenapa Grammar itu Penting?
             </h2>
 
             <ul className="mt-4 space-y-3 text-white/70">
-              <li>
-                <span className="text-white font-medium">Subject</span> → siapa
-                yang melakukan (contoh: I, She, They)
-              </li>
-              <li>
-                <span className="text-white font-medium">Verb</span> → aksi
-                (contoh: eat, read, play)
-              </li>
-              <li>
-                <span className="text-white font-medium">Object</span> → yang
-                dikenai aksi (contoh: rice, book, football)
-              </li>
+              <li>• Biar orang lain paham maksud kamu dengan jelas</li>
+              <li>• Menghindari salah arti saat bicara</li>
+              <li>• Membuat kamu lebih percaya diri</li>
+              <li>• Dipakai di kerja, sekolah, dan dunia internasional</li>
             </ul>
           </motion.section>
 
-          {/* Examples */}
+          {/* Basic structure */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -102,18 +94,29 @@ export default function SVOPatternPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Contoh Kalimat SVO
+              Struktur Dasar Kalimat
             </h2>
 
-            <div className="mt-4 space-y-3 text-white/70">
-              <p>• They eat apples</p>
-              <p>• We play football</p>
-              <p>• I read books</p>
-              <p>• You watch movies</p>
+            <p className="mt-4 text-white/70">
+              Dalam bahasa Inggris, pola paling dasar adalah:
+            </p>
+
+            <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white">
+              <p className="text-center font-semibold">
+                Subject + Verb + Object
+              </p>
             </div>
+
+            <p className="mt-4 text-white/70">
+              Contoh sederhana:
+              <br />
+              <span className="text-white font-medium">
+                I (Subject) eat (Verb) rice (Object)
+              </span>
+            </p>
           </motion.section>
 
-          {/* Test */}
+          {/* TEST PANEL */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -121,34 +124,34 @@ export default function SVOPatternPage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat yang mengikuti pola SVO yang benar:"
+              question="Pilih susunan kalimat yang benar dalam bahasa Inggris:"
               options={[
                 {
                   value: "a",
-                  label: "A. They eat apples",
+                  label: "A. She reads a book",
                   isCorrect: true,
                   feedback:
-                    "Benar karena mengikuti urutan Subject (They) + Verb (eat) + Object (apples).",
+                    "Benar karena mengikuti pola Subject + Verb + Object (She = subject, reads = verb, a book = object).",
                 },
                 {
                   value: "b",
-                  label: "B. Eat they apples",
+                  label: "B. Reads she a book",
                   isCorrect: false,
                   feedback:
-                    "Salah karena verb tidak boleh berada di awal dalam kalimat deklaratif.",
+                    "Salah karena verb tidak boleh mendahului subject dalam kalimat deklaratif.",
                 },
                 {
                   value: "c",
-                  label: "C. Apples they eat",
+                  label: "C. A book she reads",
                   isCorrect: false,
                   feedback:
-                    "Salah karena object tidak boleh berada di awal dalam struktur dasar SVO.",
+                    "Salah dalam konteks basic sentence structure (kecuali gaya tertentu seperti emphasis atau literary style).",
                 },
               ]}
             />
           </motion.section>
 
-          {/* Tips */}
+          {/* Friendly note */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -156,36 +159,28 @@ export default function SVOPatternPage() {
             transition={{ duration: 0.5 }}
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
-            <h2 className="text-2xl font-semibold text-white">Tips Belajar</h2>
+            <h2 className="text-2xl font-semibold text-white">
+              Tips dari aku untuk kamu
+            </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Biasakan membaca kalimat sederhana setiap hari. Semakin sering
-              kamu melihat pola SVO, semakin cepat kamu terbiasa menyusunnya
-              sendiri.
+              Jangan buru-buru ingin langsung jago. Grammar itu bukan hafalan,
+              tapi kebiasaan. Semakin sering kamu membaca dan latihan, semakin
+              natural kamu akan paham.
             </p>
           </motion.section>
         </div>
 
         {/* CTA */}
-        {/* CTA Navigation */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-16 text-center"
         >
-          {/* Previous Button */}
           <button
-            onClick={() => navigate("/beginner/GrammarIntroPage")}
-            className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
-          >
-            Materi Sebelumnya
-          </button>
-
-          {/* Next Button */}
-          <button
-            onClick={() => navigate("/beginner/PresentSimplePage")}
+            onClick={() => navigate("/beginner/SVOPatternPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

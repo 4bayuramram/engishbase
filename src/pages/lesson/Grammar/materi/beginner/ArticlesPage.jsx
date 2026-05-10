@@ -1,13 +1,11 @@
-// GrammarIntroPage no 1
 "use client";
+
 import { useNavigate } from "react-router-dom";
-
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function GrammarIntroPage() {
+export default function ArticlesPage() {
   const navigate = useNavigate();
-
 
   return (
     <main
@@ -29,23 +27,21 @@ export default function GrammarIntroPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Beginner Lesson
+            Lesson 8
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Introduction to English Grammar
+            Articles (A, An, The)
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Selamat datang 👋 Di sini kamu akan mulai memahami dasar grammar
-            bahasa Inggris dengan cara yang sederhana, santai, dan mudah
-            dimengerti.
+            Di materi ini kamu akan belajar cara menggunakan “a”, “an”, dan
+            “the” dengan benar dalam kalimat bahasa Inggris.
           </p>
         </motion.div>
 
-        {/* Content Section */}
         <div className="mt-16 space-y-10">
-          {/* What is Grammar */}
+          {/* Concept */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,18 +50,20 @@ export default function GrammarIntroPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Grammar?
+              Apa itu Articles?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Grammar adalah kumpulan aturan yang membantu kita menyusun kata
-              menjadi kalimat yang benar. Ibaratnya, grammar itu seperti “peta”
-              yang membuat kita tidak tersesat saat berbicara atau menulis
-              bahasa Inggris.
+              Articles adalah kata kecil yang digunakan sebelum noun (kata
+              benda) untuk menjelaskan apakah benda tersebut umum atau spesifik.
             </p>
+
+            <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
+              A / An = umum | The = spesifik
+            </div>
           </motion.section>
 
-          {/* Why important */}
+          {/* Explanation */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,49 +72,71 @@ export default function GrammarIntroPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Kenapa Grammar itu Penting?
+              Penjelasan Sederhana
             </h2>
 
-            <ul className="mt-4 space-y-3 text-white/70">
-              <li>• Biar orang lain paham maksud kamu dengan jelas</li>
-              <li>• Menghindari salah arti saat bicara</li>
-              <li>• Membuat kamu lebih percaya diri</li>
-              <li>• Dipakai di kerja, sekolah, dan dunia internasional</li>
-            </ul>
-          </motion.section>
+            <div className="mt-4 space-y-3 text-white/70">
+              <p>
+                • <span className="text-white font-medium">A</span> → digunakan
+                sebelum kata benda tunggal yang dimulai dengan konsonan (a book)
+              </p>
 
-          {/* Basic structure */}
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
-          >
-            <h2 className="text-2xl font-semibold text-white">
-              Struktur Dasar Kalimat
-            </h2>
+              <p>
+                • <span className="text-white font-medium">An</span> → digunakan
+                sebelum kata benda yang dimulai dengan vokal (an apple)
+              </p>
 
-            <p className="mt-4 text-white/70">
-              Dalam bahasa Inggris, pola paling dasar adalah:
-            </p>
-
-            <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white">
-              <p className="text-center font-semibold">
-                Subject + Verb + Object
+              <p>
+                • <span className="text-white font-medium">The</span> →
+                digunakan untuk sesuatu yang sudah jelas atau spesifik (the book
+                on the table)
               </p>
             </div>
-
-            <p className="mt-4 text-white/70">
-              Contoh sederhana:
-              <br />
-              <span className="text-white font-medium">
-                I (Subject) eat (Verb) rice (Object)
-              </span>
-            </p>
           </motion.section>
 
-          {/* TEST PANEL */}
+          {/* Grammar Rule */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
+          >
+            <h2 className="text-2xl font-semibold text-white">
+              Aturan Penting
+            </h2>
+
+            <div className="mt-4 space-y-3 text-white/70">
+              <p>• A → sebelum bunyi konsonan (a car, a dog)</p>
+              <p>• An → sebelum bunyi vokal (an egg, an hour)</p>
+              <p>
+                • The → untuk sesuatu yang sudah diketahui pembicara dan lawan
+                bicara
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Examples */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
+          >
+            <h2 className="text-2xl font-semibold text-white">
+              Contoh Kalimat
+            </h2>
+
+            <div className="mt-4 space-y-3 text-white/70">
+              <p>• I have a book</p>
+              <p>• She eats an apple</p>
+              <p>• The sun is bright</p>
+              <p>• I saw a cat in the garden</p>
+            </div>
+          </motion.section>
+
+          {/* Test */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -124,34 +144,34 @@ export default function GrammarIntroPage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih susunan kalimat yang benar dalam bahasa Inggris:"
+              question="Pilih kalimat penggunaan article yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. She reads a book",
-                  isCorrect: true,
+                  label: "A. I saw an dog in the park",
+                  isCorrect: false,
                   feedback:
-                    "Benar karena mengikuti pola Subject + Verb + Object (She = subject, reads = verb, a book = object).",
+                    "Salah karena 'dog' diawali konsonan, jadi harus 'a dog'.",
                 },
                 {
                   value: "b",
-                  label: "B. Reads she a book",
-                  isCorrect: false,
+                  label: "B. I saw a dog in the park",
+                  isCorrect: true,
                   feedback:
-                    "Salah karena verb tidak boleh mendahului subject dalam kalimat deklaratif.",
+                    "Benar karena 'dog' diawali konsonan sehingga menggunakan 'a'.",
                 },
                 {
                   value: "c",
-                  label: "C. A book she reads",
+                  label: "C. I saw dog in park",
                   isCorrect: false,
                   feedback:
-                    "Salah dalam konteks basic sentence structure (kecuali gaya tertentu seperti emphasis atau literary style).",
+                    "Salah karena kalimat membutuhkan article untuk noun tunggal.",
                 },
               ]}
             />
           </motion.section>
 
-          {/* Friendly note */}
+          {/* Tips */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -159,28 +179,32 @@ export default function GrammarIntroPage() {
             transition={{ duration: 0.5 }}
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
-            <h2 className="text-2xl font-semibold text-white">
-              Tips dari aku untuk kamu
-            </h2>
+            <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Jangan buru-buru ingin langsung jago. Grammar itu bukan hafalan,
-              tapi kebiasaan. Semakin sering kamu membaca dan latihan, semakin
-              natural kamu akan paham.
+              Fokus pada suara awal kata (bunyi vokal atau konsonan), bukan
+              hanya hurufnya. Itu kunci utama penggunaan a dan an.
             </p>
           </motion.section>
         </div>
 
-        {/* CTA */}
+        {/* Navigation */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 text-center"
+          className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/SVOPatternPage")}
+            onClick={() => navigate("/beginner/CountableUncountablePage")}
+            className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
+          >
+            Materi Sebelumnya
+          </button>
+
+          <button
+            onClick={() => navigate("/beginner/PronounsPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

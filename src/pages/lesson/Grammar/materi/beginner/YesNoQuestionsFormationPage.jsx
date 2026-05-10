@@ -2,9 +2,9 @@
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function PrepositionsOfPlacePage() {
+export default function YesNoQuestionsFormationPage() {
   const navigate = useNavigate();
 
   return (
@@ -27,16 +27,17 @@ export default function PrepositionsOfPlacePage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 14
+            Lesson 15
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Prepositions of Place
+            Yes/No Questions Formation
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar prepositions of place yang digunakan
-            untuk menunjukkan posisi atau lokasi suatu benda maupun orang.
+            Di materi ini kamu akan belajar cara membuat pertanyaan Yes/No dalam
+            bahasa Inggris menggunakan auxiliary verbs seperti do, does, did,
+            am, is, are, dan modal verbs.
           </p>
         </motion.div>
 
@@ -50,16 +51,16 @@ export default function PrepositionsOfPlacePage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Prepositions of Place?
+              Apa itu Yes/No Questions?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Prepositions of place adalah kata depan yang digunakan untuk
-              menjelaskan lokasi atau posisi suatu objek dalam kalimat.
+              Yes/No Questions adalah pertanyaan yang jawabannya biasanya hanya
+              “Yes” atau “No”.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              in / on / under / next to / behind / in front of / between
+              Auxiliary Verb + Subject + Verb + ?
             </div>
           </motion.section>
 
@@ -77,83 +78,60 @@ export default function PrepositionsOfPlacePage() {
 
             <div className="mt-6 space-y-6 text-white/70">
               <div>
-                <h3 className="font-semibold text-white text-lg">1. In</h3>
-                <p className="mt-2">
-                  Digunakan untuk menunjukkan sesuatu berada di dalam.
-                </p>
+                <h3 className="font-semibold text-white text-lg">
+                  1. Menggunakan Do / Does
+                </h3>
+
+                <p className="mt-2">Digunakan pada Present Simple.</p>
 
                 <div className="mt-3 space-y-2">
-                  <p>• The book is in the bag</p>
-                  <p>• She is in the room</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">2. On</h3>
-                <p className="mt-2">
-                  Digunakan untuk menunjukkan sesuatu berada di atas permukaan.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• The phone is on the table</p>
-                  <p>• The picture is on the wall</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">3. Under</h3>
-                <p className="mt-2">
-                  Digunakan untuk menunjukkan sesuatu berada di bawah.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• The cat is under the chair</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">4. Next to</h3>
-                <p className="mt-2">
-                  Digunakan untuk menunjukkan posisi di samping.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• The school is next to the bank</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">5. Behind</h3>
-                <p className="mt-2">
-                  Digunakan untuk menunjukkan posisi di belakang.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• The car is behind the house</p>
+                  <p>• Do you like coffee?</p>
+                  <p>• Does she play piano?</p>
                 </div>
               </div>
 
               <div>
                 <h3 className="font-semibold text-white text-lg">
-                  6. In front of
+                  2. Menggunakan Did
                 </h3>
-                <p className="mt-2">
-                  Digunakan untuk menunjukkan posisi di depan.
-                </p>
+
+                <p className="mt-2">Digunakan pada Past Simple.</p>
 
                 <div className="mt-3 space-y-2">
-                  <p>• She is standing in front of the door</p>
+                  <p>• Did they visit Bali?</p>
+                  <p>• Did he call you yesterday?</p>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-semibold text-white text-lg">7. Between</h3>
+                <h3 className="font-semibold text-white text-lg">
+                  3. Menggunakan To Be
+                </h3>
+
                 <p className="mt-2">
-                  Digunakan untuk menunjukkan posisi di antara dua benda/orang.
+                  Jika kalimat menggunakan am, is, atau are maka cukup pindahkan
+                  to be ke depan.
                 </p>
 
                 <div className="mt-3 space-y-2">
-                  <p>• The park is between the school and the bank</p>
+                  <p>• Are you happy?</p>
+                  <p>• Is she a doctor?</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-white text-lg">
+                  4. Menggunakan Modal Verbs
+                </h3>
+
+                <p className="mt-2">
+                  Modal seperti can, will, should, dan must dipindahkan ke awal
+                  kalimat.
+                </p>
+
+                <div className="mt-3 space-y-2">
+                  <p>• Can you swim?</p>
+                  <p>• Will they come tonight?</p>
                 </div>
               </div>
             </div>
@@ -172,11 +150,10 @@ export default function PrepositionsOfPlacePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Gunakan "in" untuk posisi di dalam sesuatu</p>
-              <p>• Gunakan "on" untuk posisi di atas permukaan</p>
-              <p>• Gunakan "under" untuk posisi di bawah</p>
-              <p>• Gunakan "between" hanya untuk dua objek</p>
-              <p>• Gunakan "next to" untuk posisi yang sangat dekat/samping</p>
+              <p>• Auxiliary verb harus berada di awal pertanyaan</p>
+              <p>• Setelah does/did gunakan verb bentuk pertama</p>
+              <p>• Gunakan tanda tanya di akhir kalimat</p>
+              <p>• Jangan gunakan verb tambahan setelah to be</p>
             </div>
           </motion.section>
 
@@ -193,15 +170,15 @@ export default function PrepositionsOfPlacePage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• My shoes are under the bed</p>
-              <p>• The laptop is on the desk</p>
-              <p>• We are in the classroom</p>
-              <p>• The hospital is next to the supermarket</p>
-              <p>• The cat is behind the sofa</p>
+              <p>• Do you study English every day?</p>
+              <p>• Does she work in Jakarta?</p>
+              <p>• Did they watch the movie?</p>
+              <p>• Are we late?</p>
+              <p>• Can he drive a car?</p>
             </div>
           </motion.section>
 
-          {/* Test */}
+          {/* Test 1 */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -209,67 +186,65 @@ export default function PrepositionsOfPlacePage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat dengan preposition of place yang benar:"
+              question="Pilih bentuk Yes/No Question yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. The book is on the table",
-                  isCorrect: true,
+                  label: "A. Did she has finished her homework before dinner?",
+                  isCorrect: false,
                   feedback:
-                    "Benar karena 'on' digunakan untuk posisi di atas permukaan meja.",
+                    "Salah karena setelah 'did' verb harus bentuk dasar (have/finish), bukan 'has'.",
                 },
                 {
                   value: "b",
-                  label: "B. The book is in the table",
+                  label: "B. Did she finished her homework before dinner?",
                   isCorrect: false,
                   feedback:
-                    "Salah karena benda berada di atas meja, bukan di dalam meja.",
+                    "Salah karena setelah 'did' tidak boleh menggunakan verb bentuk past (-ed).",
                 },
                 {
                   value: "c",
-                  label: "C. The book is between the table",
-                  isCorrect: false,
-                  feedback: "Salah karena 'between' digunakan untuk dua objek.",
+                  label: "C. Did she finish her homework before dinner?",
+                  isCorrect: true,
+                  feedback:
+                    "Benar karena setelah 'did' selalu menggunakan verb bentuk dasar (V1).",
                 },
               ]}
             />
+          </motion.section>
 
-            <motion.section
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="mt-8"
-            >
-              <TestPanel
-                question="Pilih kalimat yang paling tepat menggunakan preposition of place:"
-                options={[
-                  {
-                    value: "a",
-                    label: "A. The library is on the bank and the supermarket",
-                    isCorrect: false,
-                    feedback:
-                      "Salah karena 'on' tidak digunakan untuk menunjukkan posisi di antara dua tempat.",
-                  },
-                  {
-                    value: "b",
-                    label:
-                      "B. The library is under the bank and the supermarket",
-                    isCorrect: false,
-                    feedback:
-                      "Salah karena 'under' berarti di bawah dan tidak sesuai konteks lokasi.",
-                  },
-                  {
-                    value: "c",
-                    label:
-                      "C. The library is between the bank and the supermarket",
-                    isCorrect: true,
-                    feedback:
-                      "Benar karena 'between' digunakan untuk posisi di antara dua tempat.",
-                  },
-                ]}
-              />
-            </motion.section>
+          {/* Test 2 */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <TestPanel
+              question="Pilih kalimat Yes/No Question yang paling tepat:"
+              options={[
+                {
+                  value: "a",
+                  label: "A. Did he went to school yesterday?",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena setelah 'did' verb harus bentuk pertama.",
+                },
+                {
+                  value: "b",
+                  label: "B. Did he go to school yesterday?",
+                  isCorrect: true,
+                  feedback:
+                    "Benar karena menggunakan verb bentuk pertama setelah 'did'.",
+                },
+                {
+                  value: "c",
+                  label: "C. He did go to school yesterday?",
+                  isCorrect: false,
+                  feedback: "Salah karena susunan pertanyaan tidak tepat.",
+                },
+              ]}
+            />
           </motion.section>
 
           {/* Tips */}
@@ -283,18 +258,14 @@ export default function PrepositionsOfPlacePage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Bayangkan posisi benda secara visual untuk menentukan preposition
-              yang tepat.
+              Cara paling mudah membuat Yes/No Questions adalah memindahkan
+              auxiliary verb ke depan kalimat.
               <br />
               <br />
-              • in = di dalam
+              Contoh:
               <br />
-              • on = di atas
-              <br />
-              • under = di bawah
-              <br />
-              • next to = di samping
-              <br />• behind = di belakang
+              • She likes pizza → Does she like pizza?
+              <br />• They went home → Did they go home?
             </p>
           </motion.section>
         </div>
@@ -308,14 +279,14 @@ export default function PrepositionsOfPlacePage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/PrepositionsOfTimePage")}
+            onClick={() => navigate("/beginner/PrepositionsOfPlacePage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/YesNoQuestionsFormationPage")}
+            onClick={() => navigate("/beginner/WhQuestionsPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

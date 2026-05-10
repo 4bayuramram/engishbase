@@ -2,9 +2,10 @@
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1"
+// import TestPanel from "../../../../../../components/grammar/TestPanel1";
 
-export default function PresentContinuousPage() {
+export default function AdjectivesComparativesPage() {
   const navigate = useNavigate();
 
   return (
@@ -27,16 +28,16 @@ export default function PresentContinuousPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 4
+            Lesson 11
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Present Continuous Tense Usage
+            Basic Adjectives & Comparatives
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar bagaimana menyatakan aktivitas yang
-            sedang terjadi saat ini atau di sekitar waktu pembicaraan.
+            Di materi ini kamu akan belajar bagaimana menggambarkan sifat benda
+            (adjective) dan membandingkan dua hal (comparative).
           </p>
         </motion.div>
 
@@ -50,21 +51,20 @@ export default function PresentContinuousPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Present Continuous?
+              Apa itu Adjectives?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Present Continuous digunakan untuk menjelaskan aksi yang sedang
-              berlangsung sekarang atau rencana yang sudah pasti dalam waktu
-              dekat.
+              Adjectives adalah kata sifat yang digunakan untuk menjelaskan
+              karakteristik suatu benda, orang, atau hal.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              Subject + am/is/are + Verb-ing
+              big, small, fast, beautiful, tall
             </div>
           </motion.section>
 
-          {/* Usage */}
+          {/* Comparatives */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,34 +73,20 @@ export default function PresentContinuousPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Kapan digunakan?
+              Apa itu Comparatives?
             </h2>
 
-            <ul className="mt-4 space-y-3 text-white/70">
-              <li>
-                <span className="text-white font-medium">
-                  Aktivitas yang sedang terjadi sekarang
-                </span>{" "}
-                → I am studying English right now.
-              </li>
+            <p className="mt-4 text-white/70 leading-relaxed">
+              Comparatives digunakan untuk membandingkan dua hal. Biasanya
+              ditambahkan "-er" atau menggunakan "more".
+            </p>
 
-              <li>
-                <span className="text-white font-medium">
-                  Aktivitas sementara
-                </span>{" "}
-                → She is living in Jakarta this month.
-              </li>
-
-              <li>
-                <span className="text-white font-medium">
-                  Rencana dekat yang sudah pasti
-                </span>{" "}
-                → They are meeting tomorrow.
-              </li>
-            </ul>
+            <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
+              big → bigger | beautiful → more beautiful
+            </div>
           </motion.section>
 
-          {/* Grammar Rule */}
+          {/* Rules */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -113,10 +99,14 @@ export default function PresentContinuousPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I → am + verb-ing</p>
-              <p>• He/She/It → is + verb-ing</p>
-              <p>• You/We/They → are + verb-ing</p>
-              <p>• Contoh: eat → eating, play → playing, write → writing</p>
+              <p>
+                • Kata pendek (satu suku kata ) → tambah -er (tall → taller)
+              </p>
+              <p>
+                • Kata panjang (lebih dari satu suku kata ) → pakai “more” (more
+                beautiful)
+              </p>
+              <p>• Gunakan “than” untuk perbandingan</p>
             </div>
           </motion.section>
 
@@ -133,10 +123,10 @@ export default function PresentContinuousPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• I am reading a book</p>
-              <p>• She is cooking dinner</p>
-              <p>• They are playing football</p>
-              <p>• We are learning English</p>
+              <p>• This car is faster than that car</p>
+              <p>• She is taller than her brother</p>
+              <p>• This house is more beautiful than mine</p>
+              <p>• Today is hotter than yesterday</p>
             </div>
           </motion.section>
 
@@ -146,29 +136,58 @@ export default function PresentContinuousPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="space-y-8"
           >
             <TestPanel
-              question="Pilih kalimat Present Continuous yang benar:"
+              question="Pilih kalimat comparative yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. She read a book now",
+                  label: "A. She is more tall than me",
                   isCorrect: false,
                   feedback:
-                    "Salah karena tidak menggunakan bentuk Present Continuous (tidak ada is/am/are + verb-ing).",
+                    "Salah karena 'tall' harus menggunakan bentuk 'taller', bukan 'more tall'.",
                 },
                 {
                   value: "b",
-                  label: "B. She is reading a book",
+                  label: "B. She is taller than me",
                   isCorrect: true,
                   feedback:
-                    "Benar karena menggunakan is + verb-ing yang menunjukkan aktivitas sedang berlangsung.",
+                    "Benar karena 'tall' berubah menjadi 'taller' untuk comparative.",
                 },
                 {
                   value: "c",
-                  label: "C. She reading a book",
+                  label: "C. She is tall than me",
                   isCorrect: false,
-                  feedback: "Salah karena kurang auxiliary verb (is/am/are).",
+                  feedback:
+                    "Salah karena comparative membutuhkan bentuk 'taller', bukan 'tall'.",
+                },
+              ]}
+            />
+
+            <TestPanel
+              question="Pilih kalimat comparative yang benar (kata sifat panjang):"
+              options={[
+                {
+                  value: "a",
+                  label: "A. This situation is complicater than before",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena 'complicated' termasuk kata panjang, jadi tidak pakai '-er'.",
+                },
+                {
+                  value: "b",
+                  label: "B. This situation is complicate than before",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena bentuk dasar 'complicate' tidak digunakan sebagai adjective comparative.",
+                },
+                {
+                  value: "c",
+                  label: "C. This situation is more complicated than before",
+                  isCorrect: true,
+                  feedback:
+                    "Benar karena 'complicated' adalah kata sifat panjang sehingga menggunakan 'more + adjective'.",
                 },
               ]}
             />
@@ -185,9 +204,8 @@ export default function PresentContinuousPage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Bayangkan sedang “menonton video langsung” dari suatu aktivitas.
-              Jika sedang terjadi sekarang, hampir selalu pakai Present
-              Continuous.
+              Ingat: kalau membandingkan dua hal, selalu gunakan “than” dan
+              bentuk comparative yang benar (taller, bigger, more beautiful).
             </p>
           </motion.section>
         </div>
@@ -201,14 +219,14 @@ export default function PresentContinuousPage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/PresentSimplePage")}
+            onClick={() => navigate("/beginner/PossessivePronounsPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/PastSimplePage")}
+            onClick={() => navigate("/beginner/AdverbsOfFrequencyPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

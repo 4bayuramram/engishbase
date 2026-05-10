@@ -2,9 +2,9 @@
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function YesNoQuestionsFormationPage() {
+export default function ConditionalsType0Page() {
   const navigate = useNavigate();
 
   return (
@@ -27,17 +27,17 @@ export default function YesNoQuestionsFormationPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 15
+            Lesson 20
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Yes/No Questions Formation
+            Conditionals Type 0
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar cara membuat pertanyaan Yes/No dalam
-            bahasa Inggris menggunakan auxiliary verbs seperti do, does, did,
-            am, is, are, dan modal verbs.
+            (Facts & General Truths) — Di materi ini kamu akan belajar kalimat
+            pengandaian yang menyatakan fakta ilmiah, kebenaran umum, dan
+            kebiasaan yang selalu benar.
           </p>
         </motion.div>
 
@@ -51,20 +51,21 @@ export default function YesNoQuestionsFormationPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Yes/No Questions?
+              Apa itu Conditional Type 0?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Yes/No Questions adalah pertanyaan yang jawabannya biasanya hanya
-              “Yes” atau “No”.
+              Conditional Type 0 digunakan untuk menyatakan sesuatu yang selalu
+              benar jika kondisi tertentu terpenuhi, seperti hukum alam, fakta
+              ilmiah, atau kebiasaan.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              Auxiliary Verb + Subject + Verb + ?
+              If + Present Simple, Present Simple
             </div>
           </motion.section>
 
-          {/* Explanation */}
+          {/* Grammar Rules */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,88 +73,19 @@ export default function YesNoQuestionsFormationPage() {
             transition={{ duration: 0.5 }}
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
-            <h2 className="text-2xl font-semibold text-white">
-              Penjelasan Penggunaan
-            </h2>
-
-            <div className="mt-6 space-y-6 text-white/70">
-              <div>
-                <h3 className="font-semibold text-white text-lg">
-                  1. Menggunakan Do / Does
-                </h3>
-
-                <p className="mt-2">Digunakan pada Present Simple.</p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• Do you like coffee?</p>
-                  <p>• Does she play piano?</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">
-                  2. Menggunakan Did
-                </h3>
-
-                <p className="mt-2">Digunakan pada Past Simple.</p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• Did they visit Bali?</p>
-                  <p>• Did he call you yesterday?</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">
-                  3. Menggunakan To Be
-                </h3>
-
-                <p className="mt-2">
-                  Jika kalimat menggunakan am, is, atau are maka cukup pindahkan
-                  to be ke depan.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• Are you happy?</p>
-                  <p>• Is she a doctor?</p>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-semibold text-white text-lg">
-                  4. Menggunakan Modal Verbs
-                </h3>
-
-                <p className="mt-2">
-                  Modal seperti can, will, should, dan must dipindahkan ke awal
-                  kalimat.
-                </p>
-
-                <div className="mt-3 space-y-2">
-                  <p>• Can you swim?</p>
-                  <p>• Will they come tonight?</p>
-                </div>
-              </div>
-            </div>
-          </motion.section>
-
-          {/* Grammar Rule */}
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
-          >
-            <h2 className="text-2xl font-semibold text-white">
-              Aturan Penting
-            </h2>
+            <h2 className="text-2xl font-semibold text-white">Grammar Rules</h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Auxiliary verb harus berada di awal pertanyaan</p>
-              <p>• Setelah does/did gunakan verb bentuk pertama</p>
-              <p>• Gunakan tanda tanya di akhir kalimat</p>
-              <p>• Jangan gunakan verb tambahan setelah to be</p>
+              <p>• Menggunakan Simple Present di kedua klausa</p>
+              <p>• Bisa memakai If / When / Whenever</p>
+              <p>• Tidak menggunakan will dalam if-clause</p>
+              <p>• Hasil selalu benar (fakta atau kebiasaan)</p>
+            </div>
+
+            <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white/70">
+              <p>✔ If you heat water, it boils</p>
+              <p>✔ When it rains, the ground gets wet</p>
+              <p>✘ If it will rain, the ground gets wet</p>
             </div>
           </motion.section>
 
@@ -170,11 +102,11 @@ export default function YesNoQuestionsFormationPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Do you study English every day?</p>
-              <p>• Does she work in Jakarta?</p>
-              <p>• Did they watch the movie?</p>
-              <p>• Are we late?</p>
-              <p>• Can he drive a car?</p>
+              <p>• If you freeze water, it becomes ice</p>
+              <p>• If you heat ice, it melts</p>
+              <p>• When I get tired, I go to sleep early</p>
+              <p>• If it rains, the ground gets wet</p>
+              <p>• Plants die if they don’t get water</p>
             </div>
           </motion.section>
 
@@ -186,28 +118,27 @@ export default function YesNoQuestionsFormationPage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih bentuk Yes/No Question yang benar:"
+              question="Pilih kalimat Conditional Type 0 yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. Did she has finished her homework before dinner?",
+                  label: "A. If you will heat water, it boils",
                   isCorrect: false,
                   feedback:
-                    "Salah karena setelah 'did' verb harus bentuk dasar (have/finish), bukan 'has'.",
+                    "Salah karena tidak boleh menggunakan 'will' dalam if-clause.",
                 },
                 {
                   value: "b",
-                  label: "B. Did she finished her homework before dinner?",
+                  label: "B. If you heated water, it boils",
                   isCorrect: false,
-                  feedback:
-                    "Salah karena setelah 'did' tidak boleh menggunakan verb bentuk past (-ed).",
+                  feedback: "Salah karena tenses tidak konsisten.",
                 },
                 {
                   value: "c",
-                  label: "C. Did she finish her homework before dinner?",
+                  label: "C. If you heat water, it boils",
                   isCorrect: true,
                   feedback:
-                    "Benar karena setelah 'did' selalu menggunakan verb bentuk dasar (V1).",
+                    "Benar karena sesuai struktur Type 0: Present + Present.",
                 },
               ]}
             />
@@ -219,29 +150,63 @@ export default function YesNoQuestionsFormationPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="mt-8"
           >
             <TestPanel
-              question="Pilih kalimat Yes/No Question yang paling tepat:"
+              question="Pilih kalimat yang paling tepat menggunakan Conditional Type 0:"
               options={[
                 {
                   value: "a",
-                  label: "A. Did he went to school yesterday?",
+                  label: "A. If it rains, the ground will get wet",
                   isCorrect: false,
-                  feedback:
-                    "Salah karena setelah 'did' verb harus bentuk pertama.",
+                  feedback: "Salah karena ini Type 1, bukan Type 0.",
                 },
                 {
                   value: "b",
-                  label: "B. Did he go to school yesterday?",
+                  label: "B. If it rains, the ground gets wet",
                   isCorrect: true,
-                  feedback:
-                    "Benar karena menggunakan verb bentuk pertama setelah 'did'.",
+                  feedback: "Benar karena menunjukkan fakta umum.",
                 },
                 {
                   value: "c",
-                  label: "C. He did go to school yesterday?",
+                  label: "C. If it rain, the ground gets wet",
                   isCorrect: false,
-                  feedback: "Salah karena susunan pertanyaan tidak tepat.",
+                  feedback: "Salah karena 'rains' harus present simple.",
+                },
+              ]}
+            />
+          </motion.section>
+
+          {/* Test 3 */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-8"
+          >
+            <TestPanel
+              question="Pilih kalimat fakta umum yang benar:"
+              options={[
+                {
+                  value: "a",
+                  label: "A. If I will be tired, I go to sleep",
+                  isCorrect: false,
+                  feedback:
+                    "Salah karena tidak boleh menggunakan 'will' setelah if.",
+                },
+                {
+                  value: "b",
+                  label: "B. If I am tired, I will go to sleep",
+                  isCorrect: false,
+                  feedback: "Ini Type 1, bukan Type 0.",
+                },
+                {
+                  value: "c",
+                  label: "C. If I am tired, I go to sleep early",
+                  isCorrect: true,
+                  feedback:
+                    "Benar karena menunjukkan kebiasaan (general truth).",
                 },
               ]}
             />
@@ -258,14 +223,15 @@ export default function YesNoQuestionsFormationPage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Cara paling mudah membuat Yes/No Questions adalah memindahkan
-              auxiliary verb ke depan kalimat.
+              Ingat: Conditional Type 0 selalu berbicara tentang sesuatu yang
+              pasti benar. Jika kamu bisa mengganti “if” dengan “when” tanpa
+              mengubah makna, itu biasanya Type 0.
               <br />
               <br />
-              Contoh:
+              • Gunakan Present Simple di kedua bagian
               <br />
-              • She likes pizza → Does she like pizza?
-              <br />• They went home → Did they go home?
+              • Jangan pakai “will” di if-clause
+              <br />• Fokus pada fakta, bukan kemungkinan
             </p>
           </motion.section>
         </div>
@@ -279,17 +245,17 @@ export default function YesNoQuestionsFormationPage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/PrepositionsOfPlacePage")}
+            onClick={() => navigate("/beginner/ModalVerbsBasicsPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/WhQuestionsPage")}
+            onClick={() => navigate("/grammar-page")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
-            Lanjut ke Materi Berikutnya
+            selesai
           </button>
         </motion.div>
       </div>

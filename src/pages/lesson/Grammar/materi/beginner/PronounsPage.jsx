@@ -2,9 +2,9 @@
 
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import TestPanel from "../../../../components/grammar/TestPanel1";
+import TestPanel from "../../../../../components/grammar/TestPanel1";
 
-export default function PossessivePronounsPage() {
+export default function PronounsPage() {
   const navigate = useNavigate();
 
   return (
@@ -27,17 +27,17 @@ export default function PossessivePronounsPage() {
           className="text-center"
         >
           <span className="text-sm uppercase tracking-[0.2em] text-white/70">
-            Lesson 10
+            Lesson 9
           </span>
 
           <h1 className="mt-4 text-4xl font-bold text-white md:text-5xl">
-            Possessive Pronouns
+            Subject & Object Pronouns
           </h1>
 
           <p className="mt-6 text-white/70 leading-relaxed">
-            Di materi ini kamu akan belajar kata ganti kepemilikan yang
-            digunakan untuk menunjukkan kepunyaan tanpa menyebut nama benda
-            berulang-ulang.
+            Di materi ini kamu akan belajar kata ganti orang yang digunakan
+            sebagai subjek (pelaku) dan objek (penerima aksi) dalam kalimat
+            bahasa Inggris.
           </p>
         </motion.div>
 
@@ -51,16 +51,41 @@ export default function PossessivePronounsPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Apa itu Possessive Pronouns?
+              Apa itu Pronouns?
             </h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Possessive pronouns adalah kata ganti yang menunjukkan kepemilikan
-              tanpa perlu menyebut noun setelahnya.
+              Pronouns adalah kata ganti yang digunakan untuk menggantikan noun
+              (kata benda) agar kalimat tidak berulang dan lebih natural.
             </p>
 
             <div className="mt-6 rounded-2xl bg-white/5 p-6 text-white text-center font-semibold">
-              mine / yours / his / hers / ours / theirs
+              Subject → Object Pronouns
+            </div>
+          </motion.section>
+
+          {/* Full Table */}
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
+          >
+            <h2 className="text-2xl font-semibold text-white">
+              Subject & Object Pronouns Lengkap
+            </h2>
+
+            <div className="mt-6 grid grid-cols-2 gap-4 text-white/80">
+              <div className="bg-white/5 p-4 rounded-xl">I → me</div>
+              <div className="bg-white/5 p-4 rounded-xl">You → you</div>
+              <div className="bg-white/5 p-4 rounded-xl">He → him</div>
+              <div className="bg-white/5 p-4 rounded-xl">She → her</div>
+              <div className="bg-white/5 p-4 rounded-xl">It → it</div>
+              <div className="bg-white/5 p-4 rounded-xl">We → us</div>
+              <div className="bg-white/5 p-4 rounded-xl col-span-2">
+                They → them
+              </div>
             </div>
           </motion.section>
 
@@ -73,20 +98,25 @@ export default function PossessivePronounsPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Penjelasan Sederhana
+              Cara Memahami dengan Mudah
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• Mine → milikku</p>
-              <p>• Yours → milikmu</p>
-              <p>• His → miliknya (laki-laki)</p>
-              <p>• Hers → miliknya (perempuan)</p>
-              <p>• Ours → milik kita</p>
-              <p>• Theirs → milik mereka</p>
+              <p>
+                • <span className="text-white font-medium">Subject</span> =
+                pelaku aksi (yang melakukan)
+              </p>
+              <p>
+                • <span className="text-white font-medium">Object</span> =
+                penerima aksi (yang dikenai)
+              </p>
+              <p>• Contoh: She loves him → She (melakukan), him (diterima)</p>
+              <p>• “It” digunakan untuk benda/hewan/hal umum</p>
+              <p>• “We” dan “They” digunakan untuk lebih dari satu orang</p>
             </div>
           </motion.section>
 
-          {/* Difference */}
+          {/* Grammar Rule */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,15 +125,13 @@ export default function PossessivePronounsPage() {
             className="rounded-3xl bg-white/10 p-8 backdrop-blur-xl border border-white/10"
           >
             <h2 className="text-2xl font-semibold text-white">
-              Perbedaan Penting
+              Aturan Penting
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• This is my book → Possessive adjective (diikuti noun)</p>
-              <p>
-                • This book is mine → Possessive pronoun (tidak diikuti noun)
-              </p>
-              <p>• Jadi possessive pronoun berdiri sendiri</p>
+              <p>• Subject selalu di awal kalimat</p>
+              <p>• Object biasanya setelah verb</p>
+              <p>• Tidak bisa saling ditukar karena akan mengubah makna</p>
             </div>
           </motion.section>
 
@@ -120,10 +148,11 @@ export default function PossessivePronounsPage() {
             </h2>
 
             <div className="mt-4 space-y-3 text-white/70">
-              <p>• This phone is mine</p>
-              <p>• The bag is hers</p>
-              <p>• The house is ours</p>
-              <p>• The car is theirs</p>
+              <p>• I help you</p>
+              <p>• She calls me</p>
+              <p>• They see us</p>
+              <p>• We like them</p>
+              <p>• He plays it</p>
             </div>
           </motion.section>
 
@@ -135,28 +164,28 @@ export default function PossessivePronounsPage() {
             transition={{ duration: 0.5 }}
           >
             <TestPanel
-              question="Pilih kalimat possessive pronoun yang benar:"
+              question="Pilih kalimat Subject & Object Pronouns yang benar:"
               options={[
                 {
                   value: "a",
-                  label: "A. This book is mine",
-                  isCorrect: true,
+                  label: "A. Him helps I",
+                  isCorrect: false,
                   feedback:
-                    "Benar karena 'mine' menunjukkan kepemilikan tanpa perlu noun setelahnya.",
+                    "Salah karena posisi subject dan object tidak sesuai aturan.",
                 },
                 {
                   value: "b",
-                  label: "B. This is my is book",
+                  label: "B. Me help she",
                   isCorrect: false,
                   feedback:
-                    "Salah karena struktur kalimat tidak benar secara grammar.",
+                    "Salah karena 'me' tidak bisa digunakan sebagai subject.",
                 },
                 {
                   value: "c",
-                  label: "C. This mine book is",
-                  isCorrect: false,
+                  label: "C. She helps me",
+                  isCorrect: true,
                   feedback:
-                    "Salah karena urutan kata tidak sesuai struktur bahasa Inggris.",
+                    "Benar karena 'she' sebagai subject dan 'me' sebagai object digunakan dengan benar.",
                 },
               ]}
             />
@@ -173,8 +202,9 @@ export default function PossessivePronounsPage() {
             <h2 className="text-2xl font-semibold text-white">Tips</h2>
 
             <p className="mt-4 text-white/70 leading-relaxed">
-              Kalau ada kata seperti mine, yours, hers, itu tidak perlu diikuti
-              kata benda lagi. Itu sudah berdiri sendiri sebagai pemilik.
+              Hafalkan pasangan ini seperti “I → me, he → him, she → her”. Kalau
+              sudah hafal pasangan, kamu tidak akan bingung lagi saat membuat
+              kalimat.
             </p>
           </motion.section>
         </div>
@@ -188,14 +218,14 @@ export default function PossessivePronounsPage() {
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <button
-            onClick={() => navigate("/beginner/PronounsPage")}
+            onClick={() => navigate("/beginner/ArticlesPage")}
             className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:bg-white/10 hover:scale-105"
           >
             Materi Sebelumnya
           </button>
 
           <button
-            onClick={() => navigate("/beginner/AdjectivesComparativesPage")}
+            onClick={() => navigate("/beginner/PossessivePronounsPage")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

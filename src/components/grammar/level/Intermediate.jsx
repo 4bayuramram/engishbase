@@ -7,55 +7,55 @@ const Intermediate = () => {
 
   const items = [
     {
-      title: "Present Perfect vs Past Simple",
-      path: "/intermediate/present-perfect",
+      title: "1. Present Perfect vs Past Simple",
+      path: "/intermediate/IntermediateGrammarPage1",
     },
     {
-      title: "Past Perfect Tense",
-      path: "/intermediate/past-perfect",
+      title: "2. Past Perfect Tense",
+      path: "/intermediate/PastPerfectTensePage",
     },
     {
-      title: "Future Perfect & Continuous",
+      title: "3. Future Perfect & Continuous",
       path: "/intermediate/future-tenses",
     },
     {
-      title: "Conditional Type 1",
+      title: "4. Conditional Type 1",
       path: "/intermediate/conditional-1",
     },
     {
-      title: "Conditional Type 2",
+      title: "5. Conditional Type 2",
       path: "/intermediate/conditional-2",
     },
     {
-      title: "Conditional Type 3",
+      title: "6. Conditional Type 3",
       path: "/intermediate/conditional-3",
     },
     {
-      title: "Passive Voice (All Tenses)",
+      title: "7. Passive Voice (All Tenses)",
       path: "/intermediate/passive-voice",
     },
     {
-      title: "Reported Speech",
+      title: "8. Reported Speech",
       path: "/intermediate/reported-speech",
     },
     {
-      title: "Modal Verbs Advanced",
+      title: "9. Modal Verbs Advanced",
       path: "/intermediate/modal-verbs",
     },
     {
-      title: "Complex Sentences",
+      title: "10. Complex Sentences",
       path: "/intermediate/complex-sentences",
     },
     {
-      title: "Relative Clauses",
+      title: "11. Relative Clauses",
       path: "/intermediate/relative-clauses",
     },
     {
-      title: "Gerunds & Infinitives",
+      title: "12. Gerunds & Infinitives",
       path: "/intermediate/gerunds-infinitives",
     },
     {
-      title: "Gerunds & Infinitives",
+      title: "13. Gerunds & Infinitives",
       path: "/intermediate/gerunds-infinitives",
     },
   ];
