@@ -54,10 +54,9 @@ import ComplexSentencesPage from "../pages/lesson/Grammar/materi/intermediate/Co
 import RelativeClausesPage from "../pages/lesson/Grammar/materi/intermediate/RelativeClausesPage";
 import GerundsInfinitivesPage from "../pages/lesson/Grammar/materi/intermediate/GerundsInfinitivesPage";
 
-
-
-
-
+// path materi Grammar advance
+import MixedConditionalPage from "../pages/lesson/Grammar/materi/advance/MixedConditionalPage";
+import InversionPage from "../pages/lesson/Grammar/materi/advance/InversionPage";
 
 
 
@@ -185,6 +184,12 @@ export default function AppRoutes() {
         path="/intermediate/gerunds-infinitives"
         element={<GerundsInfinitivesPage />}
       />
+      {/* routes materi grammar - advanced */}
+      <Route
+        path="/advance/mixed-conditionals"
+        element={<MixedConditionalPage />}
+      />
+      <Route path="/advance/inversion" element={<InversionPage />} />
 
       {/* routes halaman baca  */}
       <Route path="/practice/reading" element={<Reading />} />

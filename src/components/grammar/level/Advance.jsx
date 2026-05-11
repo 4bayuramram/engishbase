@@ -7,43 +7,43 @@ const Advance = () => {
 
   const items = [
     {
-      title: "Mixed Conditionals",
+      title: "1. Mixed Conditionals",
       path: "/advance/mixed-conditionals",
     },
     {
-      title: "Inversion",
+      title: "2. Inversion",
       path: "/advance/inversion",
     },
     {
-      title: "Cleft Sentences",
+      title: "3. Cleft Sentences",
       path: "/advance/cleft-sentences",
     },
     {
-      title: "Advanced Passive Voice",
+      title: "4. Advanced Passive Voice",
       path: "/advance/advanced-passive",
     },
     {
-      title: "Subjunctive Mood",
+      title: "5. Subjunctive Mood",
       path: "/advance/subjunctive",
     },
     {
-      title: "Nominalisation",
+      title: "6. Nominalisation",
       path: "/advance/nominalisation",
     },
     {
-      title: "Discourse Markers",
+      title: "7. Discourse Markers",
       path: "/advance/discourse-markers",
     },
     {
-      title: "Academic Writing Structure",
+      title: "8. Academic Writing Structure",
       path: "/advance/academic-writing",
     },
     {
-      title: "Formal vs Informal Style",
+      title: "9. Formal vs Informal Style",
       path: "/advance/formal-informal",
     },
     {
-      title: "Complex Clauses",
+      title: "10. Complex Clauses",
       path: "/advance/complex-clauses",
     },
     {
