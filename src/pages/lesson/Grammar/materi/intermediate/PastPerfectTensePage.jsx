@@ -312,7 +312,7 @@ export default function PastPerfectTensePage() {
           </button>
 
           <button
-            onClick={() => navigate("/intermediate/")}
+            onClick={() => navigate("/intermediate/future-tenses")}
             className="rounded-full bg-white px-10 py-4 font-semibold text-[#6b6357] transition hover:scale-105 hover:shadow-xl"
           >
             Lanjut ke Materi Berikutnya

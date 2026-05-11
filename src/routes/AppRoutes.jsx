@@ -43,7 +43,21 @@ import ConditionalsType0Page from "../pages/lesson/Grammar/materi/beginner/Condi
 // path materi Grammar intermediate
 import IntermediateGrammarPage1 from "../pages/lesson/Grammar/materi/intermediate/IntermediateGrammarPage1";
 import PastPerfectTensePage from "../pages/lesson/Grammar/materi/intermediate/PastPerfectTensePage";
-;
+import FuturePerfectContinuousPage from "../pages/lesson/Grammar/materi/intermediate/FuturePerfectContinuousPage";
+import ConditionalType1Page from "../pages/lesson/Grammar/materi/intermediate/ConditionalType1Page";
+import ConditionalType2Page from "../pages/lesson/Grammar/materi/intermediate/ConditionalType2Page";
+import ConditionalType3Page from "../pages/lesson/Grammar/materi/intermediate/ConditionalType3Page";
+import PassiveVoiceAllTensesPage from "../pages/lesson/Grammar/materi/intermediate/PassiveVoiceAllTensesPage";
+import ReportedSpeechPage from "../pages/lesson/Grammar/materi/intermediate/ReportedSpeechPage";
+import ModalVerbsAdvancedPage from "../pages/lesson/Grammar/materi/intermediate/ModalVerbsAdvancedPage";
+import ComplexSentencesPage from "../pages/lesson/Grammar/materi/intermediate/ComplexSentencesPage";
+import RelativeClausesPage from "../pages/lesson/Grammar/materi/intermediate/RelativeClausesPage";
+import GerundsInfinitivesPage from "../pages/lesson/Grammar/materi/intermediate/GerundsInfinitivesPage";
+
+
+
+
+
 
 
 
@@ -130,6 +144,46 @@ export default function AppRoutes() {
       <Route
         path="/intermediate/PastPerfectTensePage"
         element={<PastPerfectTensePage />}
+      />
+      <Route
+        path="/intermediate/future-tenses"
+        element={<FuturePerfectContinuousPage />}
+      />
+      <Route
+        path="/intermediate/conditional-1"
+        element={<ConditionalType1Page />}
+      />
+      <Route
+        path="/intermediate/conditional-2"
+        element={<ConditionalType2Page />}
+      />
+      <Route
+        path="/intermediate/conditional-3"
+        element={<ConditionalType3Page />}
+      />
+      <Route
+        path="/intermediate/passive-voice"
+        element={<PassiveVoiceAllTensesPage />}
+      />
+      <Route
+        path="/intermediate/reported-speech"
+        element={<ReportedSpeechPage />}
+      />
+      <Route
+        path="/intermediate/modal-verbs"
+        element={<ModalVerbsAdvancedPage />}
+      />
+      <Route
+        path="/intermediate/complex-sentences"
+        element={<ComplexSentencesPage />}
+      />
+      <Route
+        path="/intermediate/relative-clauses"
+        element={<RelativeClausesPage />}
+      />
+      <Route
+        path="/intermediate/gerunds-infinitives"
+        element={<GerundsInfinitivesPage />}
       />
 
       {/* routes halaman baca  */}
