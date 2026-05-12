@@ -57,6 +57,10 @@ import GerundsInfinitivesPage from "../pages/lesson/Grammar/materi/intermediate/
 // path materi Grammar advance
 import MixedConditionalPage from "../pages/lesson/Grammar/materi/advance/MixedConditionalPage";
 import InversionPage from "../pages/lesson/Grammar/materi/advance/InversionPage";
+import CleftSentencesPage from "../pages/lesson/Grammar/materi/advance/CleftSentencesPage";
+import AdvancedPassivePage from "../pages/lesson/Grammar/materi/advance/AdvancedPassivePage";
+
+
 
 
 
@@ -190,6 +194,11 @@ export default function AppRoutes() {
         element={<MixedConditionalPage />}
       />
       <Route path="/advance/inversion" element={<InversionPage />} />
+      <Route path="/advance/cleft-sentences" element={<CleftSentencesPage />} />
+      <Route
+        path="/advance/advanced-passive"
+        element={<AdvancedPassivePage />}
+      />
 
       {/* routes halaman baca  */}
       <Route path="/practice/reading" element={<Reading />} />
