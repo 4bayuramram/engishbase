@@ -6,7 +6,6 @@ import Reading from "../pages/reading/Reading";
 import PreGrammar from "../pages/lesson/PreGrammar/PreGrammar";
 import GrammarPage from "../pages/lesson/Grammar/GrammarPage";
 
-
 // path materi Pre-Grammar
 import Noun from "../pages/lesson/Noun";
 import Adjective from "../pages/lesson/Adjective";
@@ -59,7 +58,12 @@ import MixedConditionalPage from "../pages/lesson/Grammar/materi/advance/MixedCo
 import InversionPage from "../pages/lesson/Grammar/materi/advance/InversionPage";
 import CleftSentencesPage from "../pages/lesson/Grammar/materi/advance/CleftSentencesPage";
 import AdvancedPassivePage from "../pages/lesson/Grammar/materi/advance/AdvancedPassivePage";
-
+import SubjunctiveMoodPage from "../pages/lesson/Grammar/materi/advance/SubjunctiveMoodPage";
+import NominalisationPage from "../pages/lesson/Grammar/materi/advance/NominalisationPage";
+import DiscourseMarkersPage from "../pages/lesson/Grammar/materi/advance/DiscourseMarkersPage";
+import AcademicWritingStructurePage from "../pages/lesson/Grammar/materi/advance/AcademicWritingStructurePage";
+import FormalVsInformalStylePage from "../pages/lesson/Grammar/materi/advance/FormalVsInformalStylePage";
+import ComplexClausesPage from "../pages/lesson/Grammar/materi/advance/ComplexClausesPage";
 
 
 
@@ -199,6 +203,21 @@ export default function AppRoutes() {
         path="/advance/advanced-passive"
         element={<AdvancedPassivePage />}
       />
+      <Route path="/advance/subjunctive" element={<SubjunctiveMoodPage />} />
+      <Route path="/advance/nominalisation" element={<NominalisationPage />} />
+      <Route
+        path="/advance/discourse-markers"
+        element={<DiscourseMarkersPage />}
+      />
+      <Route
+        path="/advance/academic-writing"
+        element={<AcademicWritingStructurePage />}
+      />
+      <Route
+        path="/advance/formal-informal"
+        element={<FormalVsInformalStylePage />}
+      />
+      <Route path="/advance/complex-clauses" element={<ComplexClausesPage />} />
 
       {/* routes halaman baca  */}
       <Route path="/practice/reading" element={<Reading />} />
